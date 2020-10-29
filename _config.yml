@@ -1,6 +1,6 @@
 # Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
+title: C++'s Web
+description: 'A website to record coding life'
 url: 'https://qaz5823091.github.io/'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
@@ -8,12 +8,12 @@ baseurl: ''
 # disable_landing_page: true
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+  name: 'CPP'
+  email: cpp1092020@joshgerdes.com
+  twitter_username: none
+  facebook_username: none
+  github_username:  qaz5823091
+  linkedin_username:  none
 
 defaults:
   -
