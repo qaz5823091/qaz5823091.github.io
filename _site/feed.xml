@@ -5,13 +5,17 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 30 Oct 2020 00:24:09 +0800</pubDate>
-    <lastBuildDate>Fri, 30 Oct 2020 00:24:09 +0800</lastBuildDate>
+    <pubDate>Fri, 30 Oct 2020 11:49:21 +0800</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2020 11:49:21 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>建網站的初衷</title>
-        <description>&lt;h1 id=&quot;明天再補xd&quot;&gt;明天再補XD&lt;/h1&gt;
+        <title>[記錄] Hello, world!</title>
+        <description>&lt;p&gt;其實我想建網站很久了但一直研究不出來XD&lt;br /&gt;
+最近研究出來惹！&lt;br /&gt;
+用的是 Github Pages，有興趣的可以查查看 ~ &lt;br /&gt;
+這網站主要會放我學習的記錄以及程式筆記！&lt;br /&gt;
+有錯誤的地方也歡迎指正唷！&lt;br /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 00:19:00 +0800</pubDate>
         <link>http://localhost:4000/2020/first-article/</link>
