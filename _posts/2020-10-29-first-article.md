@@ -1,7 +1,11 @@
 ---
-title: "建網站的初衷"
+title: "[記錄] Hello, world!"
 date: 2020-10-30 00:19
 categories: [jekyll]
 tags: [record]
 ---
-# 明天再補XD
+其實我想建網站很久了但一直研究不出來XD
+最近研究出來惹！
+用的是 Github Pages，有興趣的可以查查看 ~
+這網站主要會放我學習的記錄以及程式筆記！
+有錯誤的地方也歡迎指正唷！
