@@ -9,11 +9,11 @@ baseurl: ''
 
 author:
   name: 'CPP'
-  email: cpp1092020@joshgerdes.com
-  twitter_username: none
-  facebook_username: none
+  email: cpp1092020@gmail.com
+  #twitter_username: none
+  #facebook_username: none
   github_username:  qaz5823091
-  linkedin_username:  none
+  #linkedin_username:  none
 
 defaults:
   -
