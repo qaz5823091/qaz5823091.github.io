@@ -7,7 +7,18 @@
   
 
   <title>[C++] NCYU 課堂練習03</title>
-  <meta name="description" content="
+  <meta name="description" content="#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+using namespace std;
+int main()
+{
+    double a,b;
+    cin&gt;&gt;a&gt;&gt;b;
+    double result = a/b;    //1.623 -&gt; 1.63
+    cout&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;result+0.004;
+}
+
+
 ">
   <meta name="author" content="CPP">
   <meta name="HandheldFriendly" content="True">
@@ -18,14 +29,36 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[C++] NCYU 課堂練習03">
-  <meta name="twitter:description" content="
+  <meta name="twitter:description" content="#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+using namespace std;
+int main()
+{
+    double a,b;
+    cin&gt;&gt;a&gt;&gt;b;
+    double result = a/b;    //1.623 -&gt; 1.63
+    cout&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;result+0.004;
+}
+
+
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="[C++] NCYU 課堂練習03">
-  <meta property="og:description" content="
+  <meta property="og:description" content="#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+using namespace std;
+int main()
+{
+    double a,b;
+    cin&gt;&gt;a&gt;&gt;b;
+    double result = a/b;    //1.623 -&gt; 1.63
+    cout&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;result+0.004;
+}
+
+
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
 
@@ -49,7 +82,7 @@
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="/css/main.css?1604043390020323913">
+  <link rel="stylesheet" href="/css/main.css?1604043832765349495">
   <link rel="canonical" href="http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
@@ -170,7 +203,28 @@
   </header>
 
   <section class="post">
-    
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span>    <span class="c1">//1.623 -&gt; 1.63</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">fixed</span><span class="o">&lt;&lt;</span><span class="n">result</span><span class="o">+</span><span class="mf">0.004</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="o">&gt;&gt;</span><span class="n">c</span><span class="o">&gt;&gt;</span><span class="n">d</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">a</span><span class="o">+</span><span class="n">d</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
   </section>
   
@@ -185,7 +239,7 @@
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1604043390020323913"></script>
+<script type="text/javascript" src="/js/main.js?1604043832765349495"></script>
 
 
     </div>

@@ -48,7 +48,7 @@
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="/css/main.css?1604043390020323913">
+  <link rel="stylesheet" href="/css/main.css?1604043832765349495">
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
@@ -189,7 +189,26 @@
     
       <li>
         <h2 class="post-list__post-title post-title"><a href="/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/" title="[C++] NCYU 課堂練習05">[C++] NCYU 課堂練習05</a></h2>
-        <p class="excerpt">
+        <p class="excerpt">#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int y;
+    cin&gt;&gt;y;
+    if( ( y%4==0 &amp;&amp; y%100!=0 ) || y%400==0 )
+        cout&lt;&lt;"YES";
+    else
+        cout&lt;&lt;"NO";
+}
+
+```c++
+#include 
+using namespace std;
+int main()
+{
+    int x,y;
+    cin&gt;&gt;x&gt;&gt;y;
+
 &hellip;</p>
         <div class="post-list__meta">
             <time datetime="2020-10-30 14:49" class="post-list__meta--date date">30 Oct 2020</time>
@@ -215,7 +234,18 @@
     
       <li>
         <h2 class="post-list__post-title post-title"><a href="/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/" title="[C++] NCYU 課堂練習03">[C++] NCYU 課堂練習03</a></h2>
-        <p class="excerpt">
+        <p class="excerpt">#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+using namespace std;
+int main()
+{
+    double a,b;
+    cin&gt;&gt;a&gt;&gt;b;
+    double result = a/b;    //1.623 -&gt; 1.63
+    cout&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;result+0.004;
+}
+
+
 &hellip;</p>
         <div class="post-list__meta">
             <time datetime="2020-10-30 14:47" class="post-list__meta--date date">30 Oct 2020</time>
@@ -280,7 +310,7 @@ int main()
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1604043390020323913"></script>
+<script type="text/javascript" src="/js/main.js?1604043832765349495"></script>
 
 
     </div>
