@@ -3,6 +3,81 @@
   
     
     <url>
+      <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9207/</loc>
+      
+        <lastmod>2020-10-30T14:51:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/</loc>
+      
+        <lastmod>2020-10-30T14:50:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</loc>
+      
+        <lastmod>2020-10-30T14:49:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/</loc>
+      
+        <lastmod>2020-10-30T14:48:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/</loc>
+      
+        <lastmod>2020-10-30T14:47:00+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/</loc>
       
         <lastmod>2020-10-30T14:46:00+08:00</lastmod>
@@ -38,7 +113,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2020-10-30T14:46:06+08:00</lastmod>
+        <lastmod>2020-10-30T15:36:30+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -53,7 +128,7 @@
     <url>
       <loc>http://localhost:4000/humans.txt</loc>
       
-        <lastmod>2020-10-30T14:46:06+08:00</lastmod>
+        <lastmod>2020-10-30T15:36:30+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -70,7 +145,7 @@
     <url>
       <loc>http://localhost:4000/js/main.js</loc>
       
-        <lastmod>2020-10-30T14:46:06+08:00</lastmod>
+        <lastmod>2020-10-30T15:36:30+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -85,7 +160,7 @@
     <url>
       <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2020-10-30T14:46:06+08:00</lastmod>
+        <lastmod>2020-10-30T15:36:30+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -104,7 +179,7 @@
     <url>
       <loc>http://localhost:4000/assets/css/style.css</loc>
       
-        <lastmod>2020-10-30T14:46:06+08:00</lastmod>
+        <lastmod>2020-10-30T15:36:30+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
