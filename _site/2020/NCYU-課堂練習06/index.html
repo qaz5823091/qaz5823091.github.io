@@ -7,7 +7,55 @@
   
 
   <title>[C++] NCYU 課堂練習06</title>
-  <meta name="description" content="
+  <meta name="description" content="#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int number;
+    while(cin&gt;&gt;number){
+        cout&lt;&lt;"1";
+        for (int i=2;i&lt;number;i++)
+            if (number%i==0)
+                cout&lt;&lt;" "&lt;&lt;i;
+        cout&lt;&lt;endl;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int t;
+    cin&gt;&gt;t;
+    while(t&gt;0){
+        int n,m;
+        cin&gt;&gt;n&gt;&gt;m;
+        int result = 1;
+        for(int i=1;i&lt;=n;i++){
+            result *= i%m;
+            result %= m;
+        }
+        cout&lt;&lt;result%m&lt;&lt;endl;
+        t--;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    for(int row=1;row&lt;=n;row++){
+        int number = row*2;
+        cout&lt;&lt;number;
+        for(int col=2;col&lt;=row;col++){
+            cout&lt;&lt;" "&lt;&lt;number + (col-1)*2;
+        }
+        cout&lt;&lt;endl;
+    }
+}
+
 ">
   <meta name="author" content="CPP">
   <meta name="HandheldFriendly" content="True">
@@ -18,14 +66,110 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[C++] NCYU 課堂練習06">
-  <meta name="twitter:description" content="
+  <meta name="twitter:description" content="#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int number;
+    while(cin&gt;&gt;number){
+        cout&lt;&lt;"1";
+        for (int i=2;i&lt;number;i++)
+            if (number%i==0)
+                cout&lt;&lt;" "&lt;&lt;i;
+        cout&lt;&lt;endl;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int t;
+    cin&gt;&gt;t;
+    while(t&gt;0){
+        int n,m;
+        cin&gt;&gt;n&gt;&gt;m;
+        int result = 1;
+        for(int i=1;i&lt;=n;i++){
+            result *= i%m;
+            result %= m;
+        }
+        cout&lt;&lt;result%m&lt;&lt;endl;
+        t--;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    for(int row=1;row&lt;=n;row++){
+        int number = row*2;
+        cout&lt;&lt;number;
+        for(int col=2;col&lt;=row;col++){
+            cout&lt;&lt;" "&lt;&lt;number + (col-1)*2;
+        }
+        cout&lt;&lt;endl;
+    }
+}
+
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="[C++] NCYU 課堂練習06">
-  <meta property="og:description" content="
+  <meta property="og:description" content="#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int number;
+    while(cin&gt;&gt;number){
+        cout&lt;&lt;"1";
+        for (int i=2;i&lt;number;i++)
+            if (number%i==0)
+                cout&lt;&lt;" "&lt;&lt;i;
+        cout&lt;&lt;endl;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int t;
+    cin&gt;&gt;t;
+    while(t&gt;0){
+        int n,m;
+        cin&gt;&gt;n&gt;&gt;m;
+        int result = 1;
+        for(int i=1;i&lt;=n;i++){
+            result *= i%m;
+            result %= m;
+        }
+        cout&lt;&lt;result%m&lt;&lt;endl;
+        t--;
+    }
+}
+
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    for(int row=1;row&lt;=n;row++){
+        int number = row*2;
+        cout&lt;&lt;number;
+        for(int col=2;col&lt;=row;col++){
+            cout&lt;&lt;" "&lt;&lt;number + (col-1)*2;
+        }
+        cout&lt;&lt;endl;
+    }
+}
+
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
 
@@ -49,7 +193,7 @@
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="/css/main.css?1604043832765349495">
+  <link rel="stylesheet" href="/css/main.css?1604070949014614657">
   <link rel="canonical" href="http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
@@ -170,7 +314,55 @@
   </header>
 
   <section class="post">
-    
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">number</span><span class="p">){</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"1"</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">number</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">t</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+        <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="n">i</span><span class="o">%</span><span class="n">m</span><span class="p">;</span>
+            <span class="n">result</span> <span class="o">%=</span> <span class="n">m</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">result</span><span class="o">%</span><span class="n">m</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">t</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">row</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">row</span><span class="o">++</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="n">row</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">number</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">col</span><span class="o">&lt;=</span><span class="n">row</span><span class="p">;</span><span class="n">col</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">" "</span><span class="o">&lt;&lt;</span><span class="n">number</span> <span class="o">+</span> <span class="p">(</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
   </section>
   
@@ -185,7 +377,7 @@
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1604043832765349495"></script>
+<script type="text/javascript" src="/js/main.js?1604070949014614657"></script>
 
 
     </div>

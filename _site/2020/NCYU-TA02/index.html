@@ -6,12 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>[記錄] Hello, world!</title>
-  <meta name="description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <title>[C++] NCYU TA課練習02</title>
+  <meta name="description" content="#include &lt;iostream&gt;  
+using namespace std;  
+int main()  
+{  
+    string number;  
+    cin&gt;&gt;number;  
+    int length = number.size();  
+    for(int i=length-1;i&gt;=0;i--){  
+        if ( number[i]-48!=0 ){  
+            length = i;  
+            break;  
+        }  
+    }  
+    for(int i=length;i&gt;=0;i--)  
+        cout&lt;&lt;number[i];  
+    cout&lt;&lt;endl;  
+}
+
 ">
   <meta name="author" content="CPP">
   <meta name="HandheldFriendly" content="True">
@@ -21,23 +34,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[記錄] Hello, world!">
-  <meta name="twitter:description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <meta name="twitter:title" content="[C++] NCYU TA課練習02">
+  <meta name="twitter:description" content="#include &lt;iostream&gt;  
+using namespace std;  
+int main()  
+{  
+    string number;  
+    cin&gt;&gt;number;  
+    int length = number.size();  
+    for(int i=length-1;i&gt;=0;i--){  
+        if ( number[i]-48!=0 ){  
+            length = i;  
+            break;  
+        }  
+    }  
+    for(int i=length;i&gt;=0;i--)  
+        cout&lt;&lt;number[i];  
+    cout&lt;&lt;endl;  
+}
+
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="[記錄] Hello, world!">
-  <meta property="og:description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <meta property="og:title" content="[C++] NCYU TA課練習02">
+  <meta property="og:description" content="#include &lt;iostream&gt;  
+using namespace std;  
+int main()  
+{  
+    string number;  
+    cin&gt;&gt;number;  
+    int length = number.size();  
+    for(int i=length-1;i&gt;=0;i--){  
+        if ( number[i]-48!=0 ){  
+            length = i;  
+            break;  
+        }  
+    }  
+    for(int i=length;i&gt;=0;i--)  
+        cout&lt;&lt;number[i];  
+    cout&lt;&lt;endl;  
+}
+
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
 
@@ -62,7 +101,7 @@
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="/css/main.css?1604070949014614657">
-  <link rel="canonical" href="http://localhost:4000/2020/first-article/">
+  <link rel="canonical" href="http://localhost:4000/2020/NCYU-TA02/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
 
@@ -173,20 +212,33 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2020-10-30 00:19" class="post-meta__date date">30 Oct 2020</time>
+      <time datetime="2020-10-30 22:17" class="post-meta__date date">30 Oct 2020</time>
       
-      &#8226; <span class="post-meta__tags">on <a href="/tags/#record">record</a></span>
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#C++">C++</a></span>
       
     </div>
-    <h1 class="post-title">[記錄] Hello, world!</h1>
+    <h1 class="post-title">[C++] NCYU TA課練習02</h1>
   </header>
 
   <section class="post">
-    <p>其實我想建網站很久了但一直研究不出來XD<br />
-最近研究出來惹！<br />
-用的是 Github Pages，有興趣的可以查查看 ~ <br />
-這網站主要會放我學習的記錄以及程式筆記！<br />
-有錯誤的地方也歡迎指正唷！<br /></p>
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;  
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>  
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>  
+<span class="p">{</span>  
+    <span class="n">string</span> <span class="n">number</span><span class="p">;</span>  
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">number</span><span class="p">;</span>  
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>  
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>  
+        <span class="k">if</span> <span class="p">(</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">48</span><span class="o">!=</span><span class="mi">0</span> <span class="p">){</span>  
+            <span class="n">length</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  
+            <span class="k">break</span><span class="p">;</span>  
+        <span class="p">}</span>  
+    <span class="p">}</span>  
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>  
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>  
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  
+<span class="p">}</span>
+</code></pre></div></div>
 
   </section>
   
