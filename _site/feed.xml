@@ -5,13 +5,17 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 30 Oct 2020 23:28:53 +0800</pubDate>
-    <lastBuildDate>Fri, 30 Oct 2020 23:28:53 +0800</lastBuildDate>
+    <pubDate>Fri, 30 Oct 2020 23:32:27 +0800</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2020 23:32:27 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>[C++] NCYU TA課練習03</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;checkA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
@@ -64,6 +68,9 @@
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:21:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-TA03/</link>
@@ -78,7 +85,11 @@
     
       <item>
         <title>[C++] NCYU 回家功課11</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
@@ -101,6 +112,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:20:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-Etutor11/</link>
@@ -115,7 +129,11 @@
     
       <item>
         <title>[C++] NCYU 回家功課10</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gcd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;  
@@ -137,6 +155,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:19:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-Etutor10/</link>
@@ -151,7 +172,11 @@
     
       <item>
         <title>[C++] NCYU 回家功課09</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
@@ -175,6 +200,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:18:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-Etutor09/</link>
@@ -189,7 +217,11 @@
     
       <item>
         <title>[C++] NCYU TA課練習02</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
@@ -207,6 +239,9 @@
     &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:17:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-TA02/</link>
@@ -221,7 +256,11 @@
     
       <item>
         <title>[C++] NCYU TA課練習01</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 #include &amp;lt;algorithm&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
@@ -239,6 +278,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:16:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-TA01/</link>
@@ -253,7 +295,11 @@
     
       <item>
         <title>[C++] NCYU 回家功課08</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 #include &amp;lt;sstream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
@@ -279,6 +325,9 @@
     &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delta&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:15:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-Etutor08/</link>
@@ -293,7 +342,11 @@
     
       <item>
         <title>[C++] NCYU 回家功課07</title>
-        <description>&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
@@ -393,6 +446,9 @@
     &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 22:14:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-Etutor07/</link>
@@ -460,6 +516,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 14:50:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/</link>
@@ -632,6 +691,9 @@
     &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2020 14:49:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</link>
