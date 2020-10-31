@@ -3,126 +3,6 @@
   
     
     <url>
-      <loc>http://localhost:4000/2020/NCYU-TA03/</loc>
-      
-        <lastmod>2020-10-30T22:21:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-Etutor11/</loc>
-      
-        <lastmod>2020-10-30T22:20:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-Etutor10/</loc>
-      
-        <lastmod>2020-10-30T22:19:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-Etutor09/</loc>
-      
-        <lastmod>2020-10-30T22:18:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-TA02/</loc>
-      
-        <lastmod>2020-10-30T22:17:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-TA01/</loc>
-      
-        <lastmod>2020-10-30T22:16:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-Etutor08/</loc>
-      
-        <lastmod>2020-10-30T22:15:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/2020/NCYU-Etutor07/</loc>
-      
-        <lastmod>2020-10-30T22:14:00+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
       <loc>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/</loc>
       
         <lastmod>2020-10-30T14:50:00+08:00</lastmod>
@@ -218,7 +98,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2020-10-31T14:10:01+08:00</lastmod>
+        <lastmod>2020-10-31T14:14:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -233,7 +113,7 @@
     <url>
       <loc>http://localhost:4000/humans.txt</loc>
       
-        <lastmod>2020-10-31T14:10:01+08:00</lastmod>
+        <lastmod>2020-10-31T14:14:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -250,7 +130,7 @@
     <url>
       <loc>http://localhost:4000/js/main.js</loc>
       
-        <lastmod>2020-10-31T14:10:01+08:00</lastmod>
+        <lastmod>2020-10-31T14:14:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -265,7 +145,7 @@
     <url>
       <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2020-10-31T14:10:01+08:00</lastmod>
+        <lastmod>2020-10-31T14:14:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -284,7 +164,7 @@
     <url>
       <loc>http://localhost:4000/assets/css/style.css</loc>
       
-        <lastmod>2020-10-31T14:10:01+08:00</lastmod>
+        <lastmod>2020-10-31T14:14:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -293,8 +173,6 @@
         <priority>0.3</priority>
       
     </url>
-    
-  
     
   
 </urlset>
