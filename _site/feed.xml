@@ -5,8 +5,8 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 31 Oct 2020 16:27:33 +0800</pubDate>
-    <lastBuildDate>Sat, 31 Oct 2020 16:27:33 +0800</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2020 21:28:30 +0800</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2020 21:28:30 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -75,6 +75,21 @@
 &lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
 &lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;回家功課09&quot;&gt;回家功課09&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;先觀察圖形：
+    &lt;ul&gt;
+      &lt;li&gt;輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 列、輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 列，所以輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 列&lt;/li&gt;
+      &lt;li&gt;第一列的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 在最中間、第列行的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 在中間及左右兩邊，並且最中間那列全為 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; （最中間怎麽用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 表示呢？）&lt;/li&gt;
+      &lt;li&gt;不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 的地方就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;要注意是小寫 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xo&lt;/code&gt; ！！！！&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 的變化很像 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;擴散&lt;/code&gt; ，每多一行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 就往兩邊擴散一個，經過中間那列之後，就開始 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;縮減&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;程式碼大概如下：&lt;/p&gt;
 &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;  
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  

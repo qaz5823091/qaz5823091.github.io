@@ -1,0 +1,49 @@
+<hr />
+<p><strong>請不要直接抄寫程式碼！</strong> <br />
+<strong>也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！</strong></p>
+
+<h3 id="第一題">第一題</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">iomanip</code> 是 C++ 管理 <code class="language-plaintext highlighter-rouge">格式化輸出</code> 的函式庫。<br /></li>
+</ul>
+
+<p><a href="http://www.cplusplus.com/reference/iomanip/?kw=iomanip">iomanip 官方文件</a></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">double</code> 與 <code class="language-plaintext highlighter-rouge">float</code> 為浮點數宣告，可以儲存小數。</li>
+  <li>除數與被除數只要一者形態為浮點數，商就會是浮點數。</li>
+  <li>因為第二位無條件進位，加多少就會進位呢？
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+#include&lt;iomanip&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+  <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span>    <span class="c1">//1.623 -&gt; 1.63</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">fixed</span><span class="o">&lt;&lt;</span><span class="n">result</span><span class="o">+</span><span class="mf">0.004</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="第二題">第二題</h3>
+
+<ul>
+  <li>簡單的四則運算，不會忘記週長跟面積的算法吧！
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include&lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">;</span>
+  <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="o">&gt;&gt;</span><span class="n">c</span><span class="o">&gt;&gt;</span><span class="n">d</span><span class="p">;</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">c</span><span class="o">-</span><span class="n">a</span><span class="o">+</span><span class="n">d</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+<p><strong>如果有任何問題，歡迎私訊跟我討論喔！</strong></p>

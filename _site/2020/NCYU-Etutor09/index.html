@@ -58,7 +58,7 @@
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="/css/main.css?1604132853281164798">
+  <link rel="stylesheet" href="/css/main.css?1604237310783969850">
   <link rel="canonical" href="http://localhost:4000/2020/NCYU-Etutor09/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
@@ -183,6 +183,21 @@
 <p><strong>請不要直接抄寫程式碼！</strong> <br />
 <strong>也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！</strong></p>
 
+<h3 id="回家功課09">回家功課09</h3>
+
+<ul>
+  <li>先觀察圖形：
+    <ul>
+      <li>輸入 <code class="language-plaintext highlighter-rouge">3</code> 就會有 <code class="language-plaintext highlighter-rouge">3</code> 行 <code class="language-plaintext highlighter-rouge">3</code> 列、輸入 <code class="language-plaintext highlighter-rouge">5</code> 就會有 <code class="language-plaintext highlighter-rouge">5</code> 行 <code class="language-plaintext highlighter-rouge">5</code> 列，所以輸入 <code class="language-plaintext highlighter-rouge">n</code> 就會有 <code class="language-plaintext highlighter-rouge">n</code> 行 <code class="language-plaintext highlighter-rouge">n</code> 列</li>
+      <li>第一列的 <code class="language-plaintext highlighter-rouge">o</code> 在最中間、第列行的 <code class="language-plaintext highlighter-rouge">o</code> 在中間及左右兩邊，並且最中間那列全為 <code class="language-plaintext highlighter-rouge">o</code> （最中間怎麽用 <code class="language-plaintext highlighter-rouge">n</code> 表示呢？）</li>
+      <li>不是 <code class="language-plaintext highlighter-rouge">o</code> 的地方就是 <code class="language-plaintext highlighter-rouge">x</code></li>
+      <li>要注意是小寫 <code class="language-plaintext highlighter-rouge">xo</code> ！！！！</li>
+      <li><code class="language-plaintext highlighter-rouge">o</code> 的變化很像 <code class="language-plaintext highlighter-rouge">擴散</code> ，每多一行 <code class="language-plaintext highlighter-rouge">o</code> 就往兩邊擴散一個，經過中間那列之後，就開始 <code class="language-plaintext highlighter-rouge">縮減</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>程式碼大概如下：</p>
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;  
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>  
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>  
@@ -224,7 +239,7 @@
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1604132853281164798"></script>
+<script type="text/javascript" src="/js/main.js?1604237310783969850"></script>
 
 
     </div>
