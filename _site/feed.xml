@@ -5,8 +5,8 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 01 Nov 2020 21:28:30 +0800</pubDate>
-    <lastBuildDate>Sun, 01 Nov 2020 21:28:30 +0800</lastBuildDate>
+    <pubDate>Mon, 02 Nov 2020 00:43:59 +0800</pubDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:43:59 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -81,10 +81,10 @@
   &lt;li&gt;先觀察圖形：
     &lt;ul&gt;
       &lt;li&gt;輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; 列、輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt; 列，所以輸入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 就會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 列&lt;/li&gt;
-      &lt;li&gt;第一列的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 在最中間、第列行的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 在中間及左右兩邊，並且最中間那列全為 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; （最中間怎麽用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 表示呢？）&lt;/li&gt;
-      &lt;li&gt;不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 的地方就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;要注意是小寫 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xo&lt;/code&gt; ！！！！&lt;/li&gt;
+      &lt;li&gt;第一列的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 在最中間、第 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 列的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 從中間往兩邊增加，而且最中間那列全為 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; （最中間怎麽用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 表示呢？）&lt;/li&gt;
+      &lt;li&gt;不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; 的地方就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 的變化很像 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;擴散&lt;/code&gt; ，每多一行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;o&lt;/code&gt; 就往兩邊擴散一個，經過中間那列之後，就開始 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;縮減&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;要注意是小寫 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xo&lt;/code&gt; ！！！！&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
