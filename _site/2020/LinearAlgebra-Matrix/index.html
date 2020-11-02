@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>[Python] 矩陣運算</title>
+  <meta name="description" content="因為 Linear Algebra 的 sheng 哥出題不手軟，
+所以就把矩陣的各種運算都寫好了！
+以免上機的時候腦袋卡住 . . .
+
+">
+  <meta name="author" content="CPP">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="[Python] 矩陣運算">
+  <meta name="twitter:description" content="因為 Linear Algebra 的 sheng 哥出題不手軟，
+所以就把矩陣的各種運算都寫好了！
+以免上機的時候腦袋卡住 . . .
+
+">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="[Python] 矩陣運算">
+  <meta property="og:description" content="因為 Linear Algebra 的 sheng 哥出題不手軟，
+所以就把矩陣的各種運算都寫好了！
+以免上機的時候腦袋卡住 . . .
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1604325920234586789">
+  <link rel="canonical" href="http://localhost:4000/2020/LinearAlgebra-Matrix/">
+  <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover "
+  style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="/" title="link to home of C++'s Web">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">C++'s Web</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">A website to record coding life</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to C++'s Web blog"
+                  class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+              
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/qaz5823091"
+                  title="qaz5823091 on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Instagram -->
+              <li class="navigation__item">
+                <a href="https://www.instagram.com/1010.0110.0110"
+                  title="1010.0110.0110 on Instagram" target="_blank">
+                  <i class="icon icon-social-instagram"></i>
+                  <span class="label">Instagram</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/steven.yeh.543"
+                  title="steven.yeh.543 on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:cpp1092020@gmail.com" title="Email cpp1092020@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+
+              <!-- RSS
+              <li class="navigation__item">
+                <a href="/feed.xml" title="Subscribe" target="_blank">
+                  <i class="icon icon-rss"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li> -->
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2020-11-02 21:53" class="post-meta__date date">2 Nov 2020</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#Python">Python</a></span>
+      
+    </div>
+    <h1 class="post-title">[Python] 矩陣運算</h1>
+  </header>
+
+  <section class="post">
+    <p>因為 Linear Algebra 的 sheng 哥出題不手軟，<br />
+所以就把矩陣的各種運算都寫好了！<br />
+以免上機的時候腦袋卡住 . . .</p>
+
+<p>行列式：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">determinant</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">coe</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">coe</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
+      <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+          <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="n">i</span> <span class="p">:</span>
+            <span class="n">row</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+      <span class="n">result</span> <span class="o">+=</span> <span class="n">coe</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">determinant</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+  <span class="k">else</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+<p>轉置矩陣：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">row</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">col</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+<p>Minor：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="k">if</span> <span class="n">i</span><span class="o">!=</span><span class="n">row</span> <span class="ow">and</span> <span class="n">j</span><span class="o">!=</span><span class="n">col</span> <span class="p">:</span>
+        <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">newRow</span> <span class="p">:</span>
+      <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+<p>Cofactor：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">cofactor</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">determinant</span><span class="p">(</span><span class="n">minor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="p">)</span>
+    <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+<p>伴隨矩陣：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">adjoint</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">cofactor</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">transpose</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+<p>反矩陣：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">det</span> <span class="o">=</span> <span class="n">determinant</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">det</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="s">"Error"</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">adjoint</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">det</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+<p>完整程式碼：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">determinant</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">coe</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">coe</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
+      <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+          <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="n">i</span> <span class="p">:</span>
+            <span class="n">row</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+      <span class="n">result</span> <span class="o">+=</span> <span class="n">coe</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">determinant</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+  <span class="k">else</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">row</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">col</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="k">def</span> <span class="nf">minor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="k">if</span> <span class="n">i</span><span class="o">!=</span><span class="n">row</span> <span class="ow">and</span> <span class="n">j</span><span class="o">!=</span><span class="n">col</span> <span class="p">:</span>
+        <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">newRow</span> <span class="p">:</span>
+      <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="k">def</span> <span class="nf">cofactor</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">newRow</span><span class="p">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">determinant</span><span class="p">(</span><span class="n">minor</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">))</span> <span class="p">)</span>
+    <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="k">def</span> <span class="nf">adjoint</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">cofactor</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">transpose</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+  <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="n">det</span> <span class="o">=</span> <span class="n">determinant</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">det</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="s">"Error"</span>
+  <span class="n">matrix</span> <span class="o">=</span> <span class="n">adjoint</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">det</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">matrix</span>
+</code></pre></div></div>
+
+<p>測試：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">matrix</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">]</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">cofactor</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">adjoint</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>測試工具：<br /></p>
+<ul>
+  <li><a href="https://onlinemathtools.com/generate-random-matrix">陣列產生器</a></li>
+  <li><a href="https://www.symbolab.com/solver/matrix-calculator">矩陣計算機</a></li>
+</ul>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2020 CPP. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1604325920234586789"></script>
+
+
+    </div>
+  </body>
+</html>
