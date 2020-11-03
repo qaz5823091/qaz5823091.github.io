@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>[記錄] Hello, world!</title>
-  <meta name="description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <title>[Python] 估計圓周率</title>
+  <meta name="description" content="利用圓的定義以及圓跟正方形的關係，
+進而推算出圓周率！
+
 ">
   <meta name="author" content="CPP">
   <meta name="HandheldFriendly" content="True">
@@ -21,23 +19,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[記錄] Hello, world!">
-  <meta name="twitter:description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <meta name="twitter:title" content="[Python] 估計圓周率">
+  <meta name="twitter:description" content="利用圓的定義以及圓跟正方形的關係，
+進而推算出圓周率！
+
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="[記錄] Hello, world!">
-  <meta property="og:description" content="其實我想建網站很久了但一直研究不出來XD
-最近研究出來惹！
-用的是 Github Pages，有興趣的可以查查看 ~ 
-這網站主要會放我學習的記錄以及程式筆記！
-有錯誤的地方也歡迎指正唷！
+  <meta property="og:title" content="[Python] 估計圓周率">
+  <meta property="og:description" content="利用圓的定義以及圓跟正方形的關係，
+進而推算出圓周率！
+
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
 
@@ -62,7 +56,7 @@
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="/css/main.css?1604420071940093199">
-  <link rel="canonical" href="http://localhost:4000/2020/first-article/">
+  <link rel="canonical" href="http://localhost:4000/2020/Python-Pi/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
 
@@ -173,20 +167,36 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2020-10-30 00:19" class="post-meta__date date">30 Oct 2020</time>
+      <time datetime="2020-11-04 00:12" class="post-meta__date date">4 Nov 2020</time>
       
-      &#8226; <span class="post-meta__tags">on <a href="/tags/#record">record</a></span>
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#Python">Python</a></span>
       
     </div>
-    <h1 class="post-title">[記錄] Hello, world!</h1>
+    <h1 class="post-title">[Python] 估計圓周率</h1>
   </header>
 
   <section class="post">
-    <p>其實我想建網站很久了但一直研究不出來XD<br />
-最近研究出來惹！<br />
-用的是 Github Pages，有興趣的可以查查看 ~ <br />
-這網站主要會放我學習的記錄以及程式筆記！<br />
-有錯誤的地方也歡迎指正唷！<br /></p>
+    <p>利用圓的定義以及圓跟正方形的關係，<br />
+進而推算出圓周率！</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">times</span> <span class="o">=</span> <span class="mi">99999</span>
+
+<span class="n">circle</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">times</span> <span class="p">)</span> <span class="p">:</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+  <span class="n">distance</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+  <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">:</span>
+    <span class="n">circle</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">circle</span> <span class="o">/</span> <span class="n">times</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+
+
+</code></pre></div></div>
 
   </section>
   
