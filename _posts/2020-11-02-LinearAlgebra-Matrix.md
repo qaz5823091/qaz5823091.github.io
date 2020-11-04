@@ -10,6 +10,11 @@ tags: [Python]
 
 
 行列式：
+* 利用遞迴將陣列縮小，並算出行列式值
+* 遞迴終點為 length==2 （二階行列式定義）
+* 計算原理是 first row 計算
+* 回傳：數字（number）
+
 ```python
 def determinant(m) :
   length = len(m)
@@ -30,7 +35,12 @@ def determinant(m) :
   else :
     return m[0][0]*m[1][1]-m[1][0]*m[0][1]
 ```
+
 轉置矩陣：
+* 就是個轉置矩陣
+* 注意陣列大小是 row , column 互換
+* 回傳：二維陣列（two-dimensional list）
+
 ```python
 def transpose(m) :
   row = len(m)
@@ -45,7 +55,13 @@ def transpose(m) :
 
   return matrix
 ```
+
 Minor：
+* 計算陣列中指定位置的 minor
+* 除了傳入陣列，還要傳入位置
+* `if newRow :` 判斷 `newRow` 是否為空陣列
+* 回傳：二維陣列（two-dimensional list）
+
 ```python
 def minor(m,row,col) :
   length = len(m)
@@ -61,7 +77,11 @@ def minor(m,row,col) :
 
   return matrix
 ```
+
 Cofactor：
+* 配合 Minor 跟 determinant 計算出 Cofactor
+* 回傳：二維陣列（two-dimensional list）
+
 ```python
 def cofactor(m) :
   length = len(m)
@@ -75,7 +95,12 @@ def cofactor(m) :
 
   return matrix
 ```
+
 伴隨矩陣：
+* 利用 adjoint 的定義計算
+* 先取陣列的 cofactor 再 transpose
+* 回傳：二維陣列（two-dimensional list）
+
 ```python
 def adjoint(m) :
   matrix = cofactor(m)
@@ -83,7 +108,13 @@ def adjoint(m) :
 
   return matrix
 ```
+
 反矩陣：
+* inverse 計算有兩種
+* 一種是 `row operation`，另一種是 `adjoint` 跟 `determinant` 的組合，這裡使用後者
+* 行列式值為零是沒被定義的，所以會回傳錯誤
+* 回傳：字串（Error） OR 二維陣列（two-dimensional list）
+
 ```python
 def inverse(m) :
   length = len(m)
@@ -98,6 +129,8 @@ def inverse(m) :
 
   return matrix
 ```
+<br>
+
 完整程式碼：
 ```python
 def determinant(m) :
