@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>[C++] 進制轉換</title>
+  <meta name="description" content="可能是因為高中課業繁忙吧，當初覺得 STL 對我來說太多餘了，
+所以就沒興趣學了，也就放掉了。
+這次重拾 STL ，先從簡單的 vector 來練練手，
+並用進制轉換當做主題！
+
+">
+  <meta name="author" content="CPP">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="[C++] 進制轉換">
+  <meta name="twitter:description" content="可能是因為高中課業繁忙吧，當初覺得 STL 對我來說太多餘了，
+所以就沒興趣學了，也就放掉了。
+這次重拾 STL ，先從簡單的 vector 來練練手，
+並用進制轉換當做主題！
+
+">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="[C++] 進制轉換">
+  <meta property="og:description" content="可能是因為高中課業繁忙吧，當初覺得 STL 對我來說太多餘了，
+所以就沒興趣學了，也就放掉了。
+這次重拾 STL ，先從簡單的 vector 來練練手，
+並用進制轉換當做主題！
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1604496705578430454">
+  <link rel="canonical" href="http://localhost:4000/2020/C++-baseTransform/">
+  <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover "
+  style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="/" title="link to home of C++'s Web">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">C++'s Web</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">A website to record coding life</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to C++'s Web blog"
+                  class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+              
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/qaz5823091"
+                  title="qaz5823091 on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Instagram -->
+              <li class="navigation__item">
+                <a href="https://www.instagram.com/1010.0110.0110"
+                  title="1010.0110.0110 on Instagram" target="_blank">
+                  <i class="icon icon-social-instagram"></i>
+                  <span class="label">Instagram</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/steven.yeh.543"
+                  title="steven.yeh.543 on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:cpp1092020@gmail.com" title="Email cpp1092020@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+
+              <!-- RSS
+              <li class="navigation__item">
+                <a href="/feed.xml" title="Subscribe" target="_blank">
+                  <i class="icon icon-rss"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li> -->
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2020-11-04 21:12" class="post-meta__date date">4 Nov 2020</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#C++">C++</a></span>
+      
+    </div>
+    <h1 class="post-title">[C++] 進制轉換</h1>
+  </header>
+
+  <section class="post">
+    <p>可能是因為高中課業繁忙吧，當初覺得 <code class="language-plaintext highlighter-rouge">STL</code> 對我來說太多餘了，<br />
+所以就沒興趣學了，也就放掉了。<br />
+這次重拾 <code class="language-plaintext highlighter-rouge">STL</code> ，先從簡單的 <code class="language-plaintext highlighter-rouge">vector</code> 來練練手，<br />
+並用進制轉換當做主題！<br /></p>
+
+<p>※ <code class="language-plaintext highlighter-rouge">STL</code> 是 <code class="language-plaintext highlighter-rouge">Standrad Template Library</code> 的縮寫 <br /></p>
+
+<hr />
+
+<p>十進位轉二進位：</p>
+<ul>
+  <li>以二進位定義計算</li>
+  <li>並將每次的結果插入 <code class="language-plaintext highlighter-rouge">vector</code> 的起點（後面解釋為什麼是 <code class="language-plaintext highlighter-rouge">insert</code> ）</li>
+  <li>傳入：整數（int）</li>
+  <li>回傳：陣列（vector）</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">baseBinary</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">){</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">it</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">number</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>印出二進位：</p>
+<ul>
+  <li>因為二進位算完後，答案是結果往前推，所以用的是 <code class="language-plaintext highlighter-rouge">insert</code></li>
+  <li>這樣一來陣列遍歷就從 <code class="language-plaintext highlighter-rouge">begin</code> 就好了</li>
+  <li><code class="language-plaintext highlighter-rouge">iterator</code> 有點像是 for <code class="language-plaintext highlighter-rouge">vector</code> 的 <code class="language-plaintext highlighter-rouge">指標</code> ，想要知道其中的值要 <code class="language-plaintext highlighter-rouge">取值 （*）</code></li>
+  <li>傳入：陣列（vector）</li>
+  <li>回傳：無（void）</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">){</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">it</span><span class="o">=</span><span class="n">number</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="n">it</span><span class="o">!=</span><span class="n">number</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="n">it</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">it</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>二進位轉十進位：</p>
+<ul>
+  <li>每一位數字乘上想對應的值</li>
+  <li>傳入：陣列（vector）</li>
+  <li>回傳：整數（int）</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">baseDecimal</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">baseTwo</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>宣告以二為基底的次方數值：</p>
+<ul>
+  <li>全域宣告以便 function 使用</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">baseTwo</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">1024</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">4096</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>完整程式碼：</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">baseTwo</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">1024</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">4096</span><span class="p">};</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">baseBinary</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">baseDecimal</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">number</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">baseBinary</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">baseDecimal</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">baseBinary</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">){</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">it</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="n">result</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">number</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">baseDecimal</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">baseTwo</span><span class="p">[</span><span class="n">length</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">number</span><span class="p">){</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">it</span><span class="o">=</span><span class="n">number</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="n">it</span><span class="o">!=</span><span class="n">number</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="n">it</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;*</span><span class="n">it</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr />
+<p>之後再將其他進制補上</p>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2020 CPP. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1604496705578430454"></script>
+
+
+    </div>
+  </body>
+</html>
