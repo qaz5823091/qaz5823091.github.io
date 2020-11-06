@@ -5,9 +5,54 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 04 Nov 2020 21:31:45 +0800</pubDate>
-    <lastBuildDate>Wed, 04 Nov 2020 21:31:45 +0800</lastBuildDate>
+    <pubDate>Fri, 06 Nov 2020 14:04:59 +0800</pubDate>
+    <lastBuildDate>Fri, 06 Nov 2020 14:04:59 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>[C++] 期中考第二題</title>
+        <description>&lt;h3 id=&quot;期中考第二題提款卡密碼&quot;&gt;期中考第二題：提款卡密碼&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+解題思路：&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a b c d . . .&lt;/code&gt; 照順序排序，計算他們相間的距離&lt;/li&gt;
+  &lt;li&gt;將上述做法具現化，可以利用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ASCII&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;將兩字元的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ASCII&lt;/code&gt; 相減，就是他們之間的距離&lt;/li&gt;
+  &lt;li&gt;因為差有可能為負，且距離不為負，所以加上 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;cmath&amp;gt;&lt;/code&gt; 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abs()&lt;/code&gt; 絕對值&lt;/li&gt;
+  &lt;li&gt;超過 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9&lt;/code&gt; 之後，則取個位數字，可以利用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; 來實現&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ASCII&lt;/code&gt; 欲做運算需將它轉形態（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cast&lt;/code&gt;），所以利用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 轉為整數形態&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for&lt;/code&gt; 迴圈遍歷 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;word&lt;/code&gt; 中每一個字元，且索引 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; 與 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i+1&lt;/code&gt; 的值&lt;/li&gt;
+  &lt;li&gt;注意上述做法 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; 會跑到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt; length-1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;ZeroJudge 類似題目：&lt;a href=&quot;https://zerojudge.tw/ShowProblem?problemid=a065&quot;&gt;Zerojudge a065：提款卡密碼&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;參考程式碼：&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 06 Nov 2020 12:40:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/NCYU-MidTerm02/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/NCYU-MidTerm02/</guid>
+        
+        <category>C++</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>[C++] 進制轉換</title>
@@ -1051,127 +1096,6 @@
         <pubDate>Fri, 30 Oct 2020 14:47:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/</guid>
-        
-        <category>C++</category>
-        
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>[C++] NCYU 課堂練習02</title>
-        <description>&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;第一題&quot;&gt;第一題&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/code&gt; 是 C++ 負責管 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cin&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cout&lt;/code&gt; 的函式庫，
-如果在前面加上 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include&lt;/code&gt; 代表引入後方的函式庫。&lt;br /&gt;
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;使用命名空間，否則每次打 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cin&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cout&lt;/code&gt; 都要在前面加上 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::&lt;/code&gt; ，像是：
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 為整數宣告，每宣告一次就像電腦索取 4 bytes ，能夠存放 -2&lt;sup&gt;31&lt;/sup&gt;-1 ~ 2&lt;sup&gt;31&lt;/sup&gt; 範圍的整數。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; 後面接著&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;變數名&lt;/code&gt;，命名需符合規則（命名盡量要有意義），變數可以一開始給予數值，也可以之後再指派。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;題目要輸入三個整數，並輸出它們相乘的結果。程式碼大概如下：
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;第二題&quot;&gt;第二題&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; 是取餘數的意思。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; 是整數除法的意思。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10 / 3 = 3 ... 1&lt;/code&gt; 意即 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10 / 3&lt;/code&gt; 會等於 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10 % 3&lt;/code&gt; 會等於 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如何判斷一個數是偶數奇數呢？我們可以將它除以二！&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;11 / 2 = 5 ... 1&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果一個數能被二整除，它會是？否則是？&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;11 % 2 = ?&lt;/code&gt; &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;我們已經知道如何在程式裡判斷偶數奇數，現在要翻轉結果！&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;程式碼大概如下（題目可能是負數）：
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;第三題&quot;&gt;第三題&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;現在知道 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; 的用法了，那怎麽活用它呢？&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1234 / 10 = 123 ... 4&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1234 % 10&lt;/code&gt; 看出來了嗎？&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;某個數被 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10&lt;/code&gt; 除之後的餘數會是這個數的最…？&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;123 / 10 = 12 ... 3&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;123 % 10&lt;/code&gt; 聰明如你！&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;程式碼大概如下：
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 30 Oct 2020 14:46:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/</guid>
         
         <category>C++</category>
         

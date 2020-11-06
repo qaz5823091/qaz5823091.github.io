@@ -6,10 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>[C++] NCYU 回家功課11</title>
-  <meta name="description" content="
-請不要直接抄寫程式碼！ 
-也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+  <title>[C++] 期中考第二題</title>
+  <meta name="description" content="期中考第二題：提款卡密碼
+
+解題思路：
+
+  a b c d . . . 照順序排序，計算他們相間的距離
+  將上述做法具現化，可以利用 ASCII
+  將兩字元的 ASCII 相減，就是他們之間的距離
+  因為差有可能為負，且距離不為負，所以加上 &lt;cmath&gt; 的 abs() 絕對值
+  超過 9 之後，則取個位數字，可以利用 % 來實現
+  ASCII 欲做運算需將它轉形態（cast），所以利用 int 轉為整數形態
+  for 迴圈遍歷 word 中每一個字元，且索引 i 與 i+1 的值
+  注意上述做法 i 會跑到 &lt; length-1
+  ZeroJudge 類似題目：Zerojudge a065：提款卡密碼
+
 
 ">
   <meta name="author" content="CPP">
@@ -20,20 +31,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[C++] NCYU 回家功課11">
-  <meta name="twitter:description" content="
-請不要直接抄寫程式碼！ 
-也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+  <meta name="twitter:title" content="[C++] 期中考第二題">
+  <meta name="twitter:description" content="期中考第二題：提款卡密碼
+
+解題思路：
+
+  a b c d . . . 照順序排序，計算他們相間的距離
+  將上述做法具現化，可以利用 ASCII
+  將兩字元的 ASCII 相減，就是他們之間的距離
+  因為差有可能為負，且距離不為負，所以加上 &lt;cmath&gt; 的 abs() 絕對值
+  超過 9 之後，則取個位數字，可以利用 % 來實現
+  ASCII 欲做運算需將它轉形態（cast），所以利用 int 轉為整數形態
+  for 迴圈遍歷 word 中每一個字元，且索引 i 與 i+1 的值
+  注意上述做法 i 會跑到 &lt; length-1
+  ZeroJudge 類似題目：Zerojudge a065：提款卡密碼
+
 
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="[C++] NCYU 回家功課11">
-  <meta property="og:description" content="
-請不要直接抄寫程式碼！ 
-也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+  <meta property="og:title" content="[C++] 期中考第二題">
+  <meta property="og:description" content="期中考第二題：提款卡密碼
+
+解題思路：
+
+  a b c d . . . 照順序排序，計算他們相間的距離
+  將上述做法具現化，可以利用 ASCII
+  將兩字元的 ASCII 相減，就是他們之間的距離
+  因為差有可能為負，且距離不為負，所以加上 &lt;cmath&gt; 的 abs() 絕對值
+  超過 9 之後，則取個位數字，可以利用 % 來實現
+  ASCII 欲做運算需將它轉形態（cast），所以利用 int 轉為整數形態
+  for 迴圈遍歷 word 中每一個字元，且索引 i 與 i+1 的值
+  注意上述做法 i 會跑到 &lt; length-1
+  ZeroJudge 類似題目：Zerojudge a065：提款卡密碼
+
 
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
@@ -59,7 +92,7 @@
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="/css/main.css?1604642699721382759">
-  <link rel="canonical" href="http://localhost:4000/2020/NCYU-Etutor11/">
+  <link rel="canonical" href="http://localhost:4000/2020/NCYU-MidTerm02/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
 
@@ -170,61 +203,46 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2020-10-30 22:20" class="post-meta__date date">30 Oct 2020</time>
+      <time datetime="2020-11-06 12:40" class="post-meta__date date">6 Nov 2020</time>
       
       &#8226; <span class="post-meta__tags">on <a href="/tags/#C++">C++</a></span>
       
     </div>
-    <h1 class="post-title">[C++] NCYU 回家功課11</h1>
+    <h1 class="post-title">[C++] 期中考第二題</h1>
   </header>
 
   <section class="post">
-    <hr />
-<p><strong>請不要直接抄寫程式碼！</strong> <br />
-<strong>也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！</strong></p>
-
-<h3 id="回家功課11">回家功課11</h3>
-
+    <h3 id="期中考第二題提款卡密碼">期中考第二題：提款卡密碼</h3>
+<p><br />
+解題思路：<br /></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">while</code> 是迴圈的一種，只要條件成立（ture），就繼續執行</li>
-  <li>因為 <code class="language-plaintext highlighter-rouge">1</code> 在程式裡可以代表 <code class="language-plaintext highlighter-rouge">true</code> ，所以 <code class="language-plaintext highlighter-rouge">while(1)</code> or <code class="language-plaintext highlighter-rouge">while(true)</code> 就會是無窮迴圈，通常搭配 <code class="language-plaintext highlighter-rouge">break</code> 來跳脫迴圈</li>
-  <li>用一變數來記錄次數，若變數不初始化就做對自己運算則會錯誤：
-    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
-<span class="n">number</span><span class="o">++</span><span class="p">;</span> <span class="c1">// number = number +1;</span>
-<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">number</span><span class="p">;</span>
-<span class="c1">// 輸出結果會是亂數，因為電腦不知道 number 是多少</span>
-</code></pre></div>    </div>
-  </li>
-  <li>判斷奇偶數之前教過囉，可以參考 <a href="../NCYU-課堂練習02/">課堂練習02</a></li>
+  <li><code class="language-plaintext highlighter-rouge">a b c d . . .</code> 照順序排序，計算他們相間的距離</li>
+  <li>將上述做法具現化，可以利用 <code class="language-plaintext highlighter-rouge">ASCII</code></li>
+  <li>將兩字元的 <code class="language-plaintext highlighter-rouge">ASCII</code> 相減，就是他們之間的距離</li>
+  <li>因為差有可能為負，且距離不為負，所以加上 <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code> 的 <code class="language-plaintext highlighter-rouge">abs()</code> 絕對值</li>
+  <li>超過 <code class="language-plaintext highlighter-rouge">9</code> 之後，則取個位數字，可以利用 <code class="language-plaintext highlighter-rouge">%</code> 來實現</li>
+  <li><code class="language-plaintext highlighter-rouge">ASCII</code> 欲做運算需將它轉形態（<code class="language-plaintext highlighter-rouge">cast</code>），所以利用 <code class="language-plaintext highlighter-rouge">int</code> 轉為整數形態</li>
+  <li><code class="language-plaintext highlighter-rouge">for</code> 迴圈遍歷 <code class="language-plaintext highlighter-rouge">word</code> 中每一個字元，且索引 <code class="language-plaintext highlighter-rouge">i</code> 與 <code class="language-plaintext highlighter-rouge">i+1</code> 的值</li>
+  <li>注意上述做法 <code class="language-plaintext highlighter-rouge">i</code> 會跑到 <code class="language-plaintext highlighter-rouge">&lt; length-1</code></li>
+  <li>ZeroJudge 類似題目：<a href="https://zerojudge.tw/ShowProblem?problemid=a065">Zerojudge a065：提款卡密碼</a></li>
 </ul>
 
-<p>程式碼大概如下：</p>
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;  
-</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>  
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>  
-<span class="p">{</span>  
-    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>  
-        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>  
-        <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>  
-        <span class="k">if</span> <span class="p">(</span> <span class="n">n</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>  
-            <span class="k">break</span><span class="p">;</span>  
+<p>參考程式碼：</p>
 
-        <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  
-        <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>  
-            <span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="p">){</span>  
-                <span class="n">counter</span><span class="o">++</span><span class="p">;</span>  
-                <span class="n">n</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>  
-            <span class="p">}</span>  
-            <span class="k">else</span>  
-                <span class="k">break</span><span class="p">;</span>  
-        <span class="p">}</span>  
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">counter</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>  
-    <span class="p">}</span>  
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">word</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">word</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">word</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="kt">int</span> <span class="p">(</span> <span class="n">abs</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
-<hr />
-<p><strong>如果有任何問題，歡迎私訊跟我討論喔！</strong></p>
 
   </section>
   
