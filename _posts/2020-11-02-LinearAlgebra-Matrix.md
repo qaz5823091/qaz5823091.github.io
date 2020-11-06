@@ -2,7 +2,7 @@
 title: "[Python] 矩陣運算"
 date: 2020-11-02 21:53
 categories: [jekyll]
-tags: [Python]
+tags: [Python,NCYU]
 ---
 因為 Linear Algebra 的 sheng 哥出題不手軟，<br>
 所以就把矩陣的各種運算都寫好了！<br>

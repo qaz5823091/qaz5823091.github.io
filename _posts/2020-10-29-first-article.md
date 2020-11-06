@@ -2,7 +2,7 @@
 title: "[記錄] Hello, world!"
 date: 2020-10-30 00:19
 categories: [jekyll]
-tags: [record]
+tags: [Record]
 ---
 其實我想建網站很久了但一直研究不出來XD<br>
 最近研究出來惹！<br>

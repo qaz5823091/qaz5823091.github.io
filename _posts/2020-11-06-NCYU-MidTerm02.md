@@ -2,7 +2,7 @@
 title: "[C++] 期中考第二題"
 date: 2020-11-06 12:40
 categories: [jekyll]
-tags: [C++]
+tags: [C++,NCYU]
 ---
 
 ### 期中考第二題：提款卡密碼

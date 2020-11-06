@@ -2,7 +2,7 @@
 title: "[C++] 期中考第三題"
 date: 2020-11-06 14:07
 categories: [jekyll]
-tags: [C++]
+tags: [C++,NCYU]
 ---
 
 ### 期中考第三題：兌換瓶子
