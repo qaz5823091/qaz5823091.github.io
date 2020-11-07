@@ -5,9 +5,115 @@
     <description>A website to record coding life</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 06 Nov 2020 14:49:34 +0800</pubDate>
-    <lastBuildDate>Fri, 06 Nov 2020 14:49:34 +0800</lastBuildDate>
+    <pubDate>Sat, 07 Nov 2020 14:43:32 +0800</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2020 14:43:32 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>[介紹] 線上解題系統 OnlineJudge</title>
+        <description>&lt;hr /&gt;
+
+&lt;h3 id=&quot;簡介-online-judge&quot;&gt;簡介 Online Judge&lt;/h3&gt;
+
+&lt;p&gt;通常會簡稱 Judge 或者是 OJ 。&lt;br /&gt;
+那 Judge 是什麼呢？&lt;br /&gt;
+你可以想成它是一個練習 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;程式解題&lt;/code&gt; 的平臺，&lt;br /&gt;
+有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;題目敘述&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;輸入&lt;/code&gt;  、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;輸出&lt;/code&gt; ，&lt;br /&gt;
+有時候甚至還會有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;測資限制&lt;/code&gt; 或是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;時間限制&lt;/code&gt; ！&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;什麼是程式呢&quot;&gt;什麼是程式呢？&lt;/h3&gt;
+
+&lt;p&gt;就是把生活中遇到的問題，&lt;br /&gt;
+嘗試用數學、邏輯，甚至是演算法，將問題簡單化！&lt;br /&gt;
+個人認為解題就有點呆板了！&lt;br /&gt;
+因為輸入、輸出，已經被限制了，&lt;br /&gt;
+所以產生的程式可能大同小異，&lt;br /&gt;
+或者是不用某種特定方法就逾時（後面會介紹），解不出來 . . .&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;推薦的-online-judge&quot;&gt;推薦的 Online Judge&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tcgs.tc.edu.tw:1218/&quot;&gt;TCGS Green Judge 臺中女中程式解題系統&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;此 Judge 是由臺中女中所架的，掛在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tcgs.tc.edu.tw&lt;/code&gt; 的 Domain Name 上。&lt;/li&gt;
+  &lt;li&gt;題目分類清楚&lt;/li&gt;
+  &lt;li&gt;若基礎題庫的五十題做完，就有一定的程式基礎囉！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zerojudge.tw/&quot;&gt;ZeroJudge 高中生程式解題系統&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;較 Green Judge ， ZeroJudge 的題目分類較雜亂&lt;/li&gt;
+  &lt;li&gt;可以利用 &lt;a href=&quot;http://billor.chsh.chc.edu.tw/&quot;&gt;章魚教學網站&lt;/a&gt; 的題庫分類系統，來選取自己需要練習的題型（左邊選單 –&amp;gt; 資訊學科培訓 –&amp;gt; zerojudge 題目分類）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你的英文很好，再來的資源很適合你！&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/&quot;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;聽說業界面試很常看這個（不負責😂）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hackerrank.com/&quot;&gt;HackerRank&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/&quot;&gt;CodeForces&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;很多競程選手都會打這個&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://onlinejudge.org/&quot;&gt;UVa&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;術語簡介&quot;&gt;術語簡介&lt;/h3&gt;
+
+&lt;p&gt;&lt;br /&gt;
+截取自 Green Judge 首頁&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AC : Accept means accept.&lt;/li&gt;
+  &lt;li&gt;WA : Wrong Answer with the line number and current answer.&lt;/li&gt;
+  &lt;li&gt;TLE : Time Limit Exceed.&lt;/li&gt;
+  &lt;li&gt;MLE : Memory Limit Exceed.&lt;/li&gt;
+  &lt;li&gt;OLE : Memory Limit Exceed.&lt;/li&gt;
+  &lt;li&gt;RE : Runtime Error e.q.: Out of range in Array.&lt;/li&gt;
+  &lt;li&gt;RF : Restricted Function.&lt;/li&gt;
+  &lt;li&gt;CE : Compile Error.&lt;/li&gt;
+  &lt;li&gt;SE : System Error, unknown Errors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;常看到的會是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AC&lt;/code&gt; 代表你的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; 在這題目達到各種條件，答對了！&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WA&lt;/code&gt; 代表你的答案跟題目的答案不一樣，答錯了！
+有可能是差一個測資或者是全錯。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TLE&lt;/code&gt; 逾時，就是時間超過，代表你寫的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; 不夠有效率。&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CE&lt;/code&gt; 就是編譯錯誤，除非你沒先在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compiler&lt;/code&gt; 裡 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile&lt;/code&gt; 過，否則很少出現這種錯誤。&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;大致上 joe 4 john 😂&lt;/p&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2020 10:41:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/Introduce-OnlineJudge/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/Introduce-OnlineJudge/</guid>
+        
+        <category>Introduction</category>
+        
+        <category>Record</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>[C++] 期中考第三題</title>
@@ -1010,94 +1116,6 @@
         <pubDate>Fri, 30 Oct 2020 14:49:00 +0800</pubDate>
         <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</guid>
-        
-        <category>C++</category>
-        
-        <category>NCYU</category>
-        
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>[C++] NCYU 課堂練習04</title>
-        <description>&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;請不要直接抄寫程式碼！&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;第一題&quot;&gt;第一題&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cin.ignore(長度,想跳過的字元)&lt;/code&gt; 用來忽略特定字元&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string&lt;/code&gt; 有兩個函式 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;size()&lt;/code&gt; 跟 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length()&lt;/code&gt; 都是回傳字串長度
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ignore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'='&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, length=&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;第二題&quot;&gt;第二題&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;三角函數的函式是屬於 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;cmath&amp;gt;&lt;/code&gt; 函式庫&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define&lt;/code&gt; 可把想替換的字換成另一個字，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pi&lt;/code&gt; 也可以用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt; 存
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;cmath&amp;gt;
-#include &amp;lt;iomanip&amp;gt;
-#define Pi 3.14159
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setprecision&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;180.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;第三題&quot;&gt;第三題&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;先判斷分數（注意題目是大於等於），再判斷溫度及氣壓&lt;/li&gt;
-  &lt;li&gt;邏輯運算子 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;||&lt;/code&gt; 是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;or&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; 是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;and&lt;/code&gt;
-    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;High&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Low&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Warning&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;OK&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;如果有任何問題，歡迎私訊跟我討論喔！&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 30 Oct 2020 14:48:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/NCYU-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/</guid>
         
         <category>C++</category>
         
