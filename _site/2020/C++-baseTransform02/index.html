@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+
+  <title>[C++] 進制轉換 Part 2</title>
+  <meta name="description" content="這次是把 etutor 的作業做延伸，
+並且用 STL 中的 map 實作！
+
+">
+  <meta name="author" content="CPP">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="[C++] 進制轉換 Part 2">
+  <meta name="twitter:description" content="這次是把 etutor 的作業做延伸，
+並且用 STL 中的 map 實作！
+
+">
+  
+  <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="[C++] 進制轉換 Part 2">
+  <meta property="og:description" content="這次是把 etutor 的作業做延伸，
+並且用 STL 中的 map 實作！
+
+">
+  <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/css/main.css?1605698992110486756">
+  <link rel="canonical" href="http://localhost:4000/2020/C++-baseTransform02/">
+  <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover "
+  style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="/" title="link to home of C++'s Web">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">C++'s Web</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">A website to record coding life</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to C++'s Web blog"
+                  class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+              
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/qaz5823091"
+                  title="qaz5823091 on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Instagram -->
+              <li class="navigation__item">
+                <a href="https://www.instagram.com/1010.0110.0110"
+                  title="1010.0110.0110 on Instagram" target="_blank">
+                  <i class="icon icon-social-instagram"></i>
+                  <span class="label">Instagram</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/steven.yeh.543"
+                  title="steven.yeh.543 on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+              
+
+              
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:cpp1092020@gmail.com" title="Email cpp1092020@gmail.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+              
+
+              
+
+              
+
+              <!-- RSS
+              <li class="navigation__item">
+                <a href="/feed.xml" title="Subscribe" target="_blank">
+                  <i class="icon icon-rss"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li> -->
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2020-11-18 19:01" class="post-meta__date date">18 Nov 2020</time>
+      
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#C++">C++</a></span>
+      
+    </div>
+    <h1 class="post-title">[C++] 進制轉換 Part 2</h1>
+  </header>
+
+  <section class="post">
+    <p>這次是把 etutor 的作業做延伸，<br />
+並且用 <code class="language-plaintext highlighter-rouge">STL</code> 中的 <code class="language-plaintext highlighter-rouge">map</code> 實作！<br /></p>
+
+<p>上一次是用 <code class="language-plaintext highlighter-rouge">vector</code> 來實作<br />
+延伸閱讀：<a href="../C++-baseTransform">C++ 進制轉換</a> <br /></p>
+
+<h4 id="map">map</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">map</code> 的概念就是 <code class="language-plaintext highlighter-rouge">映射</code></li>
+  <li>由數個數對構成</li>
+  <li>數對是以 <code class="language-plaintext highlighter-rouge">key : value</code> 的形式存在</li>
+  <li>任一 <code class="language-plaintext highlighter-rouge">key</code> 可對到其 <code class="language-plaintext highlighter-rouge">value</code></li>
+  <li>同一個 <code class="language-plaintext highlighter-rouge">key</code> 不會有不同 <code class="language-plaintext highlighter-rouge">value</code> ，像是 <code class="language-plaintext highlighter-rouge">函數</code> 定義</li>
+</ul>
+
+<p>※ 因為程式碼有高度重複性，所以就貼一部分而已 <br /></p>
+
+<p>程式碼大概如下：<br /></p>
+<ul>
+  <li>使用 <code class="language-plaintext highlighter-rouge">map</code> 建表
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">dicHex</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span><span class="s">"0"</span><span class="p">,</span> <span class="s">"0000"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"0001"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"2"</span><span class="p">,</span> <span class="s">"0010"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"3"</span><span class="p">,</span> <span class="s">"0011"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"4"</span><span class="p">,</span> <span class="s">"0100"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"5"</span><span class="p">,</span> <span class="s">"0101"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"6"</span><span class="p">,</span> <span class="s">"0110"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"7"</span><span class="p">,</span> <span class="s">"0111"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"8"</span><span class="p">,</span> <span class="s">"1000"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"9"</span><span class="p">,</span> <span class="s">"1001"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"1010"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"b"</span><span class="p">,</span> <span class="s">"1011"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"c"</span><span class="p">,</span> <span class="s">"1100"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"d"</span><span class="p">,</span> <span class="s">"1101"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"e"</span><span class="p">,</span> <span class="s">"1110"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"f"</span><span class="p">,</span> <span class="s">"1111"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"1010"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"1011"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"1100"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"1101"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"1110"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"F"</span><span class="p">,</span> <span class="s">"1111"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0000"</span><span class="p">,</span> <span class="s">"0"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0001"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0010"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0011"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0100"</span><span class="p">,</span> <span class="s">"4"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0101"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0110"</span><span class="p">,</span> <span class="s">"6"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"0111"</span><span class="p">,</span> <span class="s">"7"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1000"</span><span class="p">,</span> <span class="s">"8"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1001"</span><span class="p">,</span> <span class="s">"9"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1010"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1011"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1100"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1101"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1110"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">},</span>
+  <span class="p">{</span><span class="s">"1111"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+  </li>
+  <li>確認數字是否為有效的 （有 <code class="language-plaintext highlighter-rouge">checkBin</code> 、 <code class="language-plaintext highlighter-rouge">checkOct</code> 、 <code class="language-plaintext highlighter-rouge">checkHex</code>）
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="nf">checkBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'0'</span> <span class="o">||</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'1'</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>初始化數字
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">while</span><span class="p">(</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">%</span> <span class="n">base</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">number</span> <span class="o">=</span> <span class="s">"0"</span> <span class="o">+</span> <span class="n">number</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>二進位轉八進位
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="nf">binToOct</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">bool</span> <span class="n">isBin</span> <span class="o">=</span> <span class="n">checkBin</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+  <span class="k">const</span> <span class="kt">int</span> <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="n">isBin</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">initialize</span><span class="p">(</span><span class="n">number</span><span class="p">,</span><span class="n">SIZE</span><span class="p">);</span>
+      <span class="kt">int</span> <span class="n">times</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">/</span> <span class="n">SIZE</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">times</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">string</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">SIZE</span><span class="p">,</span><span class="n">SIZE</span><span class="p">);</span>
+          <span class="n">result</span> <span class="o">+=</span> <span class="n">dicOct</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+      <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>八進位轉二進位
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="nf">octToBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">bool</span> <span class="n">isOct</span> <span class="o">=</span> <span class="n">checkOct</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+  <span class="n">string</span> <span class="n">result</span><span class="p">,</span> <span class="n">digit</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span> <span class="n">isOct</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+          <span class="n">result</span> <span class="o">+=</span> <span class="n">dicOct</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+      <span class="p">}</span>
+      <span class="n">deleteZero</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+      <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+      <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>刪除因運算而產生的零
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">deleteZero</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'1'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">number</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+   <span class="p">}</span>
+
+   <span class="k">return</span> <span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br />
+完整程式碼：<br /></p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;map&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// use C++11 to initialize the map</span>
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">dicOct</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="s">"0"</span><span class="p">,</span> <span class="s">"000"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"001"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"2"</span><span class="p">,</span> <span class="s">"010"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"3"</span><span class="p">,</span> <span class="s">"011"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"4"</span><span class="p">,</span> <span class="s">"100"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"5"</span><span class="p">,</span> <span class="s">"101"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"6"</span><span class="p">,</span> <span class="s">"110"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"7"</span><span class="p">,</span> <span class="s">"111"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"000"</span><span class="p">,</span> <span class="s">"0"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"001"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"010"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"011"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"100"</span><span class="p">,</span> <span class="s">"4"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"101"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"110"</span><span class="p">,</span> <span class="s">"6"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"111"</span><span class="p">,</span> <span class="s">"7"</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;</span> <span class="n">dicHex</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="s">"0"</span><span class="p">,</span> <span class="s">"0000"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1"</span><span class="p">,</span> <span class="s">"0001"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"2"</span><span class="p">,</span> <span class="s">"0010"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"3"</span><span class="p">,</span> <span class="s">"0011"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"4"</span><span class="p">,</span> <span class="s">"0100"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"5"</span><span class="p">,</span> <span class="s">"0101"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"6"</span><span class="p">,</span> <span class="s">"0110"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"7"</span><span class="p">,</span> <span class="s">"0111"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"8"</span><span class="p">,</span> <span class="s">"1000"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"9"</span><span class="p">,</span> <span class="s">"1001"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"1010"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"b"</span><span class="p">,</span> <span class="s">"1011"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"c"</span><span class="p">,</span> <span class="s">"1100"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"d"</span><span class="p">,</span> <span class="s">"1101"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"e"</span><span class="p">,</span> <span class="s">"1110"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"f"</span><span class="p">,</span> <span class="s">"1111"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"1010"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"B"</span><span class="p">,</span> <span class="s">"1011"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"C"</span><span class="p">,</span> <span class="s">"1100"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"1101"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"E"</span><span class="p">,</span> <span class="s">"1110"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"F"</span><span class="p">,</span> <span class="s">"1111"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0000"</span><span class="p">,</span> <span class="s">"0"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0001"</span><span class="p">,</span> <span class="s">"1"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0010"</span><span class="p">,</span> <span class="s">"2"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0011"</span><span class="p">,</span> <span class="s">"3"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0100"</span><span class="p">,</span> <span class="s">"4"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0101"</span><span class="p">,</span> <span class="s">"5"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0110"</span><span class="p">,</span> <span class="s">"6"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"0111"</span><span class="p">,</span> <span class="s">"7"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1000"</span><span class="p">,</span> <span class="s">"8"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1001"</span><span class="p">,</span> <span class="s">"9"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1010"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1011"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1100"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1101"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1110"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"1111"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">bool</span> <span class="nf">checkBin</span><span class="p">(</span><span class="n">string</span> <span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">checkOct</span><span class="p">(</span><span class="n">string</span> <span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">checkHex</span><span class="p">(</span><span class="n">string</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">);</span>
+<span class="n">string</span> <span class="nf">binToOct</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">);</span>
+<span class="n">string</span> <span class="nf">binToHex</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">);</span>
+<span class="n">string</span> <span class="nf">hexToBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">);</span>
+<span class="n">string</span> <span class="nf">octToBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">deleteZero</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">number</span> <span class="o">=</span> <span class="s">"110101110101101011101111110101110101"</span><span class="p">;</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">binToHex</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">number</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">checkBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'0'</span> <span class="o">||</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'1'</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">checkOct</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'0'</span> <span class="o">&amp;&amp;</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'7'</span><span class="p">)</span> <span class="p">){</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">checkHex</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="p">(</span> <span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'0'</span> <span class="o">&amp;&amp;</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'9'</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'a'</span> <span class="o">&amp;&amp;</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'f'</span><span class="p">)</span> <span class="p">)</span> <span class="p">){</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">base</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">%</span> <span class="n">base</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="s">"0"</span> <span class="o">+</span> <span class="n">number</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">string</span> <span class="nf">binToOct</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">isBin</span> <span class="o">=</span> <span class="n">checkBin</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">isBin</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">initialize</span><span class="p">(</span><span class="n">number</span><span class="p">,</span><span class="n">SIZE</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">times</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">/</span> <span class="n">SIZE</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">times</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">string</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">SIZE</span><span class="p">,</span><span class="n">SIZE</span><span class="p">);</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">dicOct</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">string</span> <span class="nf">binToHex</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">isBin</span> <span class="o">=</span> <span class="n">checkBin</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">result</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">isBin</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">initialize</span><span class="p">(</span><span class="n">number</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">times</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">/</span> <span class="n">SIZE</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">times</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">string</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">SIZE</span><span class="p">,</span><span class="n">SIZE</span><span class="p">);</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">dicHex</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">string</span> <span class="nf">octToBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">isOct</span> <span class="o">=</span> <span class="n">checkOct</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="n">string</span> <span class="n">result</span><span class="p">,</span> <span class="n">digit</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">isOct</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">dicOct</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+        <span class="p">}</span>
+        <span class="n">deleteZero</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">string</span> <span class="nf">hexToBin</span><span class="p">(</span><span class="n">string</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">isHex</span> <span class="o">=</span> <span class="n">checkHex</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+    <span class="n">string</span> <span class="n">result</span><span class="p">,</span> <span class="n">digit</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">isHex</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">number</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">digit</span> <span class="o">=</span> <span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">dicHex</span><span class="p">[</span> <span class="n">digit</span> <span class="p">];</span>
+        <span class="p">}</span>
+        <span class="n">deleteZero</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="k">return</span> <span class="s">"Error"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">deleteZero</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">while</span> <span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'1'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">number</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+     <span class="p">}</span>
+
+     <span class="k">return</span> <span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+<p>十轉二快生出來了</p>
+
+  </section>
+  
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2020 CPP. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js?1605698992110486756"></script>
+
+
+    </div>
+  </body>
+</html>
