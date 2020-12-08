@@ -5,9 +5,18 @@ categories: [jekyll]
 tags: [Python,NCYU]
 ---
 
-sheng 又再刁難人了 . . .
+<br>
+sheng 又再刁難人了 . . . <br>
 塊陶 R ！
 
+#### 以功能來介紹：
+* 將一維資料轉成二維矩陣 （ `makeMatrix` ）
+* 將一維資料轉成一行的座標 （`makeCoordinate`）
+* 轉換轉置矩陣 （ `transpose` ）
+* 計算行列式 （ `determinant` ）
+* 計算反矩陣 （ `inverse` ）
+* 矩陣乘法 （ `matrixMutiple` ）
+* 轉換基底 （ `changeBasis` ）
 
 ```python
 def makeMatrix(m) :
@@ -27,6 +36,17 @@ def makeCoordinate(m) :
     matrix = []
     for row in range(length) :
         newRow = [m[row]]
+        matrix.append(newRow)
+
+    return matrix
+
+def transpose(m) :
+    length = len(m)
+    matrix = []
+    for col in range(length) :
+        newRow = []
+        for row in range(length) :
+            newRow.append(m[row][col])
         matrix.append(newRow)
 
     return matrix
@@ -123,12 +143,14 @@ def inputData() :
     matrixA = input().split()
     matrixA = list(map(float,matrixA))
     matrixA = makeMatrix(matrixA)
+    matrixA = transpose(matrixA)
     coordinate = input().split()
     coordinate = list(map(float,coordinate))
     coordinate = makeCoordinate(coordinate)
     matrixB = input().split()
     matrixB = list(map(float,matrixB))
     matrixB = makeMatrix(matrixB)
+    matrixB = transpose(matrixB)
     print(matrixA)
     print(coordinate)
     print(matrixB)
