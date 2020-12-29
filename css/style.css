@@ -1,0 +1,10 @@
+body {
+  background-color: #3bd97a;
+  text-align: center;
+}
+
+.word {
+  font-size: 30px;
+  line-height:500px;
+	margin: auto;
+}
