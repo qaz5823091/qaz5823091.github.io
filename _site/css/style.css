@@ -4,13 +4,8 @@ body {
 }
 
 .word {
-  font-size: 60px;
-  line-height:500px;
-	margin: auto;
-}
-
-.time {
-  font-size: 60px;
+  font-size: 100px;
+  line-height:700px;
 	margin: auto;
 }
 
