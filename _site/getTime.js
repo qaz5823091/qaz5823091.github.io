@@ -1,4 +1,4 @@
-<script>
+
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
 
@@ -18,8 +18,9 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("time").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  var countDownTime = days + " 天 " + hours + " 小時 "
+  + minutes + " 分鐘 " + seconds + "秒 ";
+  document.getElementById("time").innerHTML = countDownTime;
 
   // If the count down is finished, write some text
   if (distance < 0) {
@@ -27,4 +28,3 @@ var x = setInterval(function() {
     document.getElementById("time").innerHTML = "EXPIRED";
   }
 }, 1000);
-</script>
