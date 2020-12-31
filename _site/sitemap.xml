@@ -308,7 +308,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2020-12-31T01:57:05+08:00</lastmod>
+        <lastmod>2020-12-31T22:09:23+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -323,7 +323,7 @@
     <url>
       <loc>http://localhost:4000/humans.txt</loc>
       
-        <lastmod>2020-12-31T01:57:05+08:00</lastmod>
+        <lastmod>2020-12-31T22:09:23+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -340,7 +340,7 @@
     <url>
       <loc>http://localhost:4000/js/main.js</loc>
       
-        <lastmod>2020-12-31T01:57:05+08:00</lastmod>
+        <lastmod>2020-12-31T22:09:23+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -355,7 +355,7 @@
     <url>
       <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2020-12-31T01:57:05+08:00</lastmod>
+        <lastmod>2020-12-31T22:09:23+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -374,7 +374,7 @@
     <url>
       <loc>http://localhost:4000/assets/css/style.css</loc>
       
-        <lastmod>2020-12-31T01:57:05+08:00</lastmod>
+        <lastmod>2020-12-31T22:09:23+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
