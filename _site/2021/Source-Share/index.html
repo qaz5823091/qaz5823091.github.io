@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>[Web] 讓我幫你 Google</title>
+  <title>[Source] 資源分享</title>
   <meta name="description" content="
-Let me Google for you!
+因爲網頁程式設計的課程，有一個環節是要介紹好用的資源，
+所以就來一次統整，到時候就不用找了！
+
+Web
 
 ">
   <meta name="author" content="CPP">
@@ -19,18 +22,24 @@ Let me Google for you!
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[Web] 讓我幫你 Google">
+  <meta name="twitter:title" content="[Source] 資源分享">
   <meta name="twitter:description" content="
-Let me Google for you!
+因爲網頁程式設計的課程，有一個環節是要介紹好用的資源，
+所以就來一次統整，到時候就不用找了！
+
+Web
 
 ">
   
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="[Web] 讓我幫你 Google">
+  <meta property="og:title" content="[Source] 資源分享">
   <meta property="og:description" content="
-Let me Google for you!
+因爲網頁程式設計的課程，有一個環節是要介紹好用的資源，
+所以就來一次統整，到時候就不用找了！
+
+Web
 
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
@@ -56,7 +65,7 @@ Let me Google for you!
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="/css/main.css?1614261780598177800">
-  <link rel="canonical" href="http://localhost:4000/2021/Web-LMGTFY/">
+  <link rel="canonical" href="http://localhost:4000/2021/Source-Share/">
   <link rel="alternate" type="application/rss+xml" title="C++'s Web" href="/feed.xml">
 </head>
 
@@ -167,86 +176,23 @@ Let me Google for you!
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2021-02-10 19:54" class="post-meta__date date">10 Feb 2021</time>
+      <time datetime="2021-02-25 17:45" class="post-meta__date date">25 Feb 2021</time>
       
-      &#8226; <span class="post-meta__tags">on <a href="/tags/#Web">Web</a>, <a href="/tags/#HTML">HTML</a>, <a href="/tags/#CSS">CSS</a>, <a href="/tags/#JS">JS</a></span>
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#Source">Source</a>, <a href="/tags/#Web">Web</a>, <a href="/tags/#HTML">HTML</a>, <a href="/tags/#CSS">CSS</a>, <a href="/tags/#JS">JS</a>, <a href="/tags/#C++">C++</a>, <a href="/tags/#Python">Python</a>, <a href="/tags/#Algorithm">Algorithm</a></span>
       
     </div>
-    <h1 class="post-title">[Web] 讓我幫你 Google</h1>
+    <h1 class="post-title">[Source] 資源分享</h1>
   </header>
 
   <section class="post">
-    <p><br /></p>
-<h3 id="let-me-google-for-you">Let me Google for you!</h3>
-
-<p><br />
-翻成中文意思是讓我幫你 Google！<br />
-相信大家常常在各程式社團看到伸手文，<br />
-有些人會耐心指導，<br />
-有些人則會用這個東西來嘲諷發文者根本沒上網爬文過就來伸手！
-<br /><br /></p>
-
-<h4 id="利用工具">利用工具</h4>
-<p>這次使用 HTML + CSS + JavaScript 的組合。<br /></p>
-
-<ul>
-  <li>HTML ： 網頁所看到的所有元件<br /></li>
-  <li>CSS ： 負責美編<br /></li>
-  <li>JS ： 呈現打字動畫及跳轉搜尋畫面
-<br /></li>
-</ul>
-
-<h4 id="程式發想">程式發想</h4>
-<p>打完字按下 <code class="language-plaintext highlighter-rouge">送出</code>，<code class="language-plaintext highlighter-rouge">鎖定</code> 按鈕不讓使用者再次送出，<br />
-顯示打字 <code class="language-plaintext highlighter-rouge">動畫</code> ，最後 <code class="language-plaintext highlighter-rouge">跳轉</code> 到搜尋結果
+    <p><br />
+因爲網頁程式設計的課程，有一個環節是要介紹好用的資源，<br />
+所以就來一次統整，到時候就不用找了！<br />
 <br /></p>
+<h3 id="web">Web</h3>
 
-<h4 id="程式實作">程式實作</h4>
 <ul>
-  <li>利用 <code class="language-plaintext highlighter-rouge">setIntervel</code> 來製作間隔動畫</li>
-</ul>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="k">async</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">},</span><span class="nx">intervalTime</span><span class="p">);</span>
-</code></pre></div></div>
-<ul>
-  <li>逐一增加文字到原文字長度</li>
-</ul>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="p">(</span><span class="nx">index</span> <span class="o">==</span> <span class="nx">questionText</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">interval</span><span class="p">);</span>
-  <span class="p">}</span>
-</code></pre></div></div>
-<ul>
-  <li>使用 <code class="language-plaintext highlighter-rouge">setTimeout</code> 來製作 delay 效果</li>
-</ul>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">delay</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">},</span><span class="nx">forwardTime</span><span class="p">);</span>
-</code></pre></div></div>
-<ul>
-  <li>最後用 <code class="language-plaintext highlighter-rouge">get</code> 參數跳轉到 Google 網頁</li>
-</ul>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://www.google.com/search?q=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">questionText</span><span class="p">);</span>
-</code></pre></div></div>
-<hr />
-<p>ㄏ ㄏ <br />
-一個很廢的小程式 . . .</p>
-
-<hr />
-
-<h4 id="作品成果">作品成果</h4>
-<ul>
-  <li><a href="https://www.cppwebs.ga/lmgtfy">LMGTFY 網頁</a></li>
-  <li><a href="https://github.com/qaz5823091/LMGTFY/">Github Code</a></li>
-</ul>
-
-<h4 id="參考資源">參考資源</h4>
-<ul>
-  <li><a href="https://lmgtfy.app/">LMGTFY</a></li>
+  <li><a href="https://www.google.com">Google</a></li>
 </ul>
 
   </section>
