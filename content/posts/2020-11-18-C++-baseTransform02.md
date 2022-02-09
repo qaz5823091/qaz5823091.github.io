@@ -142,8 +142,7 @@ void deleteZero(string &number) {
 }
 ```
 
-<br>
-完整程式碼：<br>
+完整程式碼：
 ```c++
 #include <iostream>
 #include <map>

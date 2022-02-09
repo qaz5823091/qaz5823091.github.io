@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Algorithm on 羲加加的部落格</title>
+    <link>http://localhost:1313/tags/algorithm/</link>
+    <description>Recent content in Algorithm on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Feb 2021 17:45:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Source] 資源分享</title>
+      <link>http://localhost:1313/posts/2021-02-25-source-share/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-02-25-source-share/</guid>
+      <description> Google  </description>
+    </item>
+    
+    <item>
+      <title>[Algorithm] 二分搜尋法</title>
+      <link>http://localhost:1313/posts/2021-01-08-algorithm-binarysearch/</link>
+      <pubDate>Fri, 08 Jan 2021 11:24:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-01-08-algorithm-binarysearch/</guid>
+      <description>二分搜尋法 Binary Search 搜尋是一種很經典的演算法，其中有一種搜尋法是將 已排序 的數列，藉由比大小將數列分成 一半 並 縮小 搜尋範圍。稱之為 「二分搜尋法」、「二元搜尋法」！#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt; using namespace std; void binarySearch(int *number, int wanted, int strat, int stop); int main() { int number[105]; int n; while (cin&amp;gt;&amp;gt;n) { for (int i=0;i&amp;lt;n;i++) cin&amp;gt;&amp;gt;number[i]; sort(number,number+n); int m, wanted; cin&amp;gt;&amp;gt;m; for (int i=0;i&amp;lt;m;i++) { cin&amp;gt;&amp;gt;wanted; binarySearch(number, wanted, 0, n-1); cout&amp;lt;&amp;lt;endl; } } } void binarySearch(int *number, int wanted, int start, int stop) { int next = (start + stop) / 2; if (start &amp;gt; stop) { cout&amp;lt;&amp;lt;&amp;#34;error&amp;#34;; return ; } cout&amp;lt;&amp;lt;next&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;number[next]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; if (wanted &amp;gt; number[next]) binarySearch(number, wanted, next+1, stop); else if (wanted == number[next]) return ; else binarySearch(number, wanted, start, next-1); } </description>
+    </item>
+    
+  </channel>
+</rss>

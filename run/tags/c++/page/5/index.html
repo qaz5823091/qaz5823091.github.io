@@ -1,0 +1,129 @@
+<!doctype html><html lang=en dir=auto>
+<head><script src="/livereload.js?mindelay=10&v=2&port=1313&path=livereload" data-no-instant defer></script><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>C++ | 羲加加的部落格</title>
+<meta name=keywords content>
+<meta name=description content="Record my coding life !">
+<meta name=author content="CPP">
+<link rel=canonical href=http://localhost:1313/tags/c++/>
+<meta name=google-site-verification content="XYZabc">
+<meta name=yandex-verification content="XYZabc">
+<meta name=msvalidate.01 content="XYZabc">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<link rel=icon href=http://localhost:1313/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png>
+<link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png>
+<link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.92.0">
+<link rel=alternate type=application/rss+xml href=http://localhost:1313/tags/c++/index.xml>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="C++">
+<meta property="og:description" content="Record my coding life !">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:1313/tags/c++/"><meta property="og:site_name" content="羲加加的部落格">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="C++">
+<meta name=twitter:description content="Record my coding life !">
+</head>
+<body class=list id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=http://localhost:1313/ accesskey=h title="羲加加的部落格 (Alt + H)">羲加加的部落格</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=http://localhost:1313/archives/ title=Archives>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=http://localhost:1313/search/ title="Search (Alt + /)" accesskey=/>
+<span>Search</span>
+</a>
+</li>
+<li>
+<a href=http://localhost:1313/tags/ title=Tags>
+<span>Tags</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<header class=page-header><div class=breadcrumbs><a href=http://localhost:1313/>Home</a>&nbsp;»&nbsp;<a href=http://localhost:1313/tags/>Tags</a></div>
+<h1>C++</h1>
+</header>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[C++] NCYU 課堂練習04
+</h2>
+</header>
+<section class=entry-content>
+<p>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題 cin.ignore(長度,想跳過的字元) 用來忽略特定字元 string 有兩個函式 size() 跟 length() 都是回傳字串長度 #include &lt;iostream>using namespace std; int main() { string word; cin.ignore(100,'='); cin>>word; cout&lt;&lt;word&lt;&lt;", length="&lt;&lt;word.size(); } 第二題 三角函數的函式是屬於 &lt;cmath> 函式庫 #define 可把想替換的字換成另一個字，Pi 也可以用 float 、 double 存 #include &lt;iostream>#include &lt;cmath>#include &lt;iomanip>#define Pi 3.14159 using namespace std; int main() { float a,b,c; cin>>a>>b>>c; cout&lt;&lt;setprecision(3)&lt;&lt;fixed&lt;&lt;a*b*sin(c*Pi/180.0)/2.0; } 第三題 先判斷分數（注意題目是大於等於），再判斷溫度及氣壓 邏輯運算子 || 是 or 、 && 是 and #include &lt;iostream>using namespace std; int main() { int score; cin>>score; if(score>=100) cout&lt;&lt;"High"; else cout&lt;&lt;"Low"; cout&lt;&lt;endl; int tem,pre; cin>>tem>>pre; if( tem>=40 || pre>=200 ) cout&lt;&lt;"Warning"; else cout&lt;&lt;"OK"; cout&lt;&lt;endl; } 如果有任何問題，歡迎私訊跟我討論喔！</p>
+</section>
+<footer class=entry-footer><span title="2020-10-30 14:48:00 +0800 CST">October 30, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;CPP</footer>
+<a class=entry-link aria-label="post link to [C++] NCYU 課堂練習04" href=http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[C++] NCYU 課堂練習03
+</h2>
+</header>
+<section class=entry-content>
+<p>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題 iomanip 是 C++ 管理 格式化輸出 的函式庫。 iomanip 官方文件
+double 與 float 為浮點數宣告，可以儲存小數。 除數與被除數只要一者形態為浮點數，商就會是浮點數。 因為第二位無條件進位，加多少就會進位呢？ #include&lt;iostream>#include&lt;iomanip>using namespace std; int main() { double a,b; cin>>a>>b; double result = a/b; //1.623 -> 1.63 cout&lt;&lt;setprecision(2)&lt;&lt;fixed&lt;&lt;result+0.004; } 第二題 簡單的四則運算，不會忘記週長跟面積的算法吧！ #include&lt;iostream>using namespace std; int main() { int a,b,c,d; cin>>a>>b>>c>>d; cout&lt;&lt;(c-a)*(d-b)&lt;&lt;endl; cout&lt;&lt;(c-a+d-b)*2; } 如果有任何問題，歡迎私訊跟我討論喔！</p>
+</section>
+<footer class=entry-footer><span title="2020-10-30 14:47:00 +0800 CST">October 30, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;CPP</footer>
+<a class=entry-link aria-label="post link to [C++] NCYU 課堂練習03" href=http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[C++] NCYU 課堂練習02
+</h2>
+</header>
+<section class=entry-content>
+<p>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題 &lt;iostream> 是 C++ 負責管 cin 、 cout 的函式庫， 如果在前面加上 #include 代表引入後方的函式庫。 #include &lt;iostream> 使用命名空間，否則每次打 cin 、 cout 都要在前面加上 std:: ，像是： std::cout&lt;&lt;"Hello, world!"&lt;&lt;endl; using namespace std; int 為整數宣告，每宣告一次就像電腦索取 4 bytes ，能夠存放 -231-1 ~ 231範圍的整數。
+int 後面接著變數名，命名需符合規則（命名盡量要有意義），變數可以一開始給予數值，也可以之後再指派。
+題目要輸入三個整數，並輸出它們相乘的結果。程式碼大概如下：
+#include &lt;iostream>using namespace std; int main() { int number1,number2,number3; cin>>number1>>number2>>number3; cout&lt;&lt;number1*number2*number3; } 第二題 % 是取餘數的意思。 / 是整數除法的意思。 10 / 3 = 3 ....</p>
+</section>
+<footer class=entry-footer><span title="2020-10-30 14:46:00 +0800 CST">October 30, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;CPP</footer>
+<a class=entry-link aria-label="post link to [C++] NCYU 課堂練習02" href=http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/></a>
+</article>
+<footer class=page-footer>
+<nav class=pagination>
+<a class=prev href=http://localhost:1313/tags/c++/page/4/>« Prev Page</a>
+</nav>
+</footer>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=http://localhost:1313/>羲加加的部落格</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>

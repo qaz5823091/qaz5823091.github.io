@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jekyll on 羲加加的部落格</title>
+    <link>http://localhost:1313/categories/jekyll/</link>
+    <description>Recent content in jekyll on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Feb 2021 17:45:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Source] 資源分享</title>
+      <link>http://localhost:1313/posts/2021-02-25-source-share/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-02-25-source-share/</guid>
+      <description> Google  </description>
+    </item>
+    
+    <item>
+      <title>[Web] 讓我幫你 Google</title>
+      <link>http://localhost:1313/posts/2021-02-10-web-lmgtfy/</link>
+      <pubDate>Wed, 10 Feb 2021 19:54:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-02-10-web-lmgtfy/</guid>
+      <description>利用工具 這次使用 HTML + CSS + JavaScript 的組合。 HTML ： 網頁所看到的所有元件 CSS ： 負責美編 JS ： 呈現打字動畫及跳轉搜尋畫面   程式發想 打完字按下 送出，鎖定 按鈕不讓使用者再次送出，顯示打字 動畫 ，最後 跳轉 到搜尋結果 程式實作  利用 setIntervel 來製作間隔動畫  var interval = setInterval(async function() { ... },intervalTime);  逐一增加文字到原文字長度  if (index == questionText.length) { clearInterval(interval); }  使用 setTimeout 來製作 delay 效果  var delay = setTimeout(function() { ... },forwardTime);  最後用 get 參數跳轉到 Google 網頁  window.</description>
+    </item>
+    
+    <item>
+      <title>[Algorithm] 二分搜尋法</title>
+      <link>http://localhost:1313/posts/2021-01-08-algorithm-binarysearch/</link>
+      <pubDate>Fri, 08 Jan 2021 11:24:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-01-08-algorithm-binarysearch/</guid>
+      <description>二分搜尋法 Binary Search 搜尋是一種很經典的演算法，其中有一種搜尋法是將 已排序 的數列，藉由比大小將數列分成 一半 並 縮小 搜尋範圍。稱之為 「二分搜尋法」、「二元搜尋法」！#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt; using namespace std; void binarySearch(int *number, int wanted, int strat, int stop); int main() { int number[105]; int n; while (cin&amp;gt;&amp;gt;n) { for (int i=0;i&amp;lt;n;i++) cin&amp;gt;&amp;gt;number[i]; sort(number,number+n); int m, wanted; cin&amp;gt;&amp;gt;m; for (int i=0;i&amp;lt;m;i++) { cin&amp;gt;&amp;gt;wanted; binarySearch(number, wanted, 0, n-1); cout&amp;lt;&amp;lt;endl; } } } void binarySearch(int *number, int wanted, int start, int stop) { int next = (start + stop) / 2; if (start &amp;gt; stop) { cout&amp;lt;&amp;lt;&amp;#34;error&amp;#34;; return ; } cout&amp;lt;&amp;lt;next&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;number[next]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; if (wanted &amp;gt; number[next]) binarySearch(number, wanted, next+1, stop); else if (wanted == number[next]) return ; else binarySearch(number, wanted, start, next-1); } </description>
+    </item>
+    
+    <item>
+      <title>[Python] 特徵值</title>
+      <link>http://localhost:1313/posts/2021-01-04-linearalgebra-eigenvalue/</link>
+      <pubDate>Mon, 04 Jan 2021 20:21:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-01-04-linearalgebra-eigenvalue/</guid>
+      <description>我只解出一元二次、三次方程式 . . . 我好爛 import math as math def toFactor(matrix) : length = len(matrix) if length == 4 : a, b = matrix[0], matrix[1] c, d = matrix[2], matrix[3] A = 1 B = (a+d) * (-1) C = a*d - b*c return A,B,C if length == 9 : a, b, c = matrix[0], matrix[1], matrix[2] d, f, g = matrix[3], matrix[4], matrix[5] h, j, l = matrix[6], matrix[7], matrix[8] A = 1 B = - a - f - l C = - b*d + a*f - c*h - g*j + a*l + f*l D = c*f*h + b*g*h + c*d*j + a*g*j + b*d*l - a*f*l return A,B,C,D if length == 16 : a, b, c, d = matrix[0], matrix[1], matrix[2], matrix[3] f, g, h, j = matrix[4], matrix[5], matrix[6], matrix[7] l, m, o, p = matrix[8], matrix[9], matrix[10], matrix[11] q, r, s, t = matrix[12], matrix[13], matrix[14], matrix[15] A = 1 B = - a - g - o - t C = - b*f + a*g - c*l - h*m + a*o + g*o - d*q - j*r - p*s + a*t + g*t + o*t D = ( c*g*l - b*h*l - c*f*m + a*h*m + b*f*o - a*g*o + d*g*q - b*j*q + d*o*q - c*p*q - d*f*r + a*j*r + j*o*r - h*p*r - d*l*s - j*m*s + a*p*s + g*p*s + b*f*t - a*g*t + c*l*t + h*m*t - a*o*t - g*o*t) E = (d*h*m*q - c*j*m*q - d*g*o*q + b*j*o*q + c*g*p*q - b*h*p*q - d*h*l*r + c*j*l*r + d*f*o*r - a*j*o*r - c*f*p*r + a*h*p*r + d*g*l*s - b*j*l*s - d*f*m*s + a*j*m*s + b*f*p*s - a*g*p*s - c*g*l*t + b*h*l*t + c*f*m*t - a*h*m*t - b*f*o*t + a*g*o*t) return A,B,C,D,E def solveFunction(f) : length = len(f) if length == 3 : A, B, C = f[0],f[1],f[2] x1 = ( -B + (B*B - 4*A*C)**(1/2)) / (2*A) x2 = ( -B - (B*B - 4*A*C)**(1/2)) / (2*A) return x1,x2 if length == 4 : A, B, C, D = f[0], f[1], f[2], f[3] p = ( -(B*B) / (3*A*A) ) + (C/A) q = ( (2*B*B*B) / (27*A*A*A) ) - ((B*C) / (3*A*A)) + (D/A) w = complex(-1,3**(1/2)) / 2 U = (-q / 2) + ( ( ( q / 2 )**2 + ( p / 3 )**3 )**(1/2) ) V = (-q / 2) - ( ( ( q / 2 )**2 + ( p / 3 )**3 )**(1/2) ) if U &amp;gt; 0 : U = math.</description>
+    </item>
+    
+    <item>
+      <title>[Web] 新年快樂</title>
+      <link>http://localhost:1313/posts/2021-01-02-web-happynewyear/</link>
+      <pubDate>Sat, 02 Jan 2021 23:30:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-01-02-web-happynewyear/</guid>
+      <description>為了應景一下，自己扣出新年倒數的網頁啦！利用工具 這次使用 HTML + CSS + JavaScript 的組合。 HTML ： 控制字及煙火的表現 CSS ： 負責美編（字的效果、煙火的顏色） JS ： 主要是倒數及內嵌 HTML   程式發想 倒數計時：到了 2021 01/01 00:00:00 就顯示 新年快樂 ，並且 放出煙火 程式實作  設定倒數終止時間  var countDownDate = new Date(&amp;#34;Jan 1, 2021 00:00:00&amp;#34;).getTime();  每一秒重新取得新內容 （單位：毫秒）  var x = setInterval(function() { // 函式內容  }, 1000);  取得現在的時間 （使用者系統時間）  var now = new Date().getTime();  更新並顯示倒數時間  使用 innerHTML 屬性，將文字內嵌到指定 id 的容器</description>
+    </item>
+    
+    <item>
+      <title>[Python] 回歸線</title>
+      <link>http://localhost:1313/posts/2020-12-19-linearalgebra-regressionline/</link>
+      <pubDate>Sat, 19 Dec 2020 00:59:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-12-19-linearalgebra-regressionline/</guid>
+      <description>「欸！你這題怎麽做？」程式電神曾經說過：「 copy and paste 」 「 . . . 」我謹記在心 def makeMatrix(m) : length = len(m) size = int( length**(1/2) ) matrix = [] for i in range(size) : newRow = [] for j in range(size) : newRow.append(m[i*size+j]) matrix.append(newRow) return matrix def makeCoordinate(m) : length = len(m) matrix = [] for row in range(length) : newRow = [m[row]] matrix.append(newRow) return matrix def transpose(m) : lengthRow = len(m) lengthCol = len(m[0]) matrix = [] for col in range(lengthCol) : newRow = [] for row in range(lengthRow) : newRow.</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] 期中考詳細參考答案</title>
+      <link>http://localhost:1313/posts/2020-12-07-ncyu-midterm/</link>
+      <pubDate>Mon, 07 Dec 2020 22:45:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-12-07-ncyu-midterm/</guid>
+      <description>參考程式碼如下：
+int caluScore(string &amp;amp;answer, int rightScore, int unansweredScore, int wrongScore) { string reply; getline(cin,reply); int score = 0; int length = reply.size(); for (int i=0;i&amp;lt;length;i++) { if (reply[i] == &amp;#39;.&amp;#39;) break; if (reply[i] == &amp;#39; &amp;#39;) score += unansweredScore; else if (reply[i] == answer[i]) score += rightScore; // means wrong  else score += wrongScore; } if (score&amp;gt;100) score = 100; if (score&amp;lt;0) score = 0; return score; } ps 不太懂為什麼題目要傳參 &amp;amp;answer</description>
+    </item>
+    
+    <item>
+      <title>[Python] 轉移矩陣</title>
+      <link>http://localhost:1313/posts/2020-12-07-linearalgebra-changebasis/</link>
+      <pubDate>Mon, 07 Dec 2020 20:41:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-12-07-linearalgebra-changebasis/</guid>
+      <description>以功能來介紹：  將一維資料轉成二維矩陣 （ makeMatrix ） 將一維資料轉成一行的座標 （makeCoordinate） 轉換轉置矩陣 （ transpose ） 計算行列式 （ determinant ） 計算反矩陣 （ inverse ） 矩陣乘法 （ matrixMutiple ） 轉換基底 （ changeBasis ）  def makeMatrix(m) : length = len(m) size = int( length**(1/2) ) matrix = [] for i in range(size) : newRow = [] for j in range(size) : newRow.append(m[i*size+j]) matrix.append(newRow) return matrix def makeCoordinate(m) : length = len(m) matrix = [] for row in range(length) : newRow = [m[row]] matrix.</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習10</title>
+      <link>http://localhost:1313/posts/2020-11-27-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9210/</link>
+      <pubDate>Fri, 27 Nov 2020 20:48:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-27-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9210/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第二題  此次解題用到 STL 中的 set ， 需要引入 &amp;lt;set&amp;gt; 這個函式庫 set 意思是 集合 ， C++ 中的 set 跟數學上的 集合 很像  set 中不會有重複的元素 但是 set 會自動由小到大排序   STL 中有一個 find 函式，意思就是尋找該容器中是否存在這個數值，回傳值為 iterator 其他就是單純邏輯運算 查詢 &amp;lt;algorithm&amp;gt; 函式庫，會有意想不到的答案  ※ 雖然 set 很好用，但是對於 C++ 初學者較難理解，所以先用 array 實作 set 看看喔！
+程式碼大概如下：
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;set&amp;gt;using namespace std; void printAnd(set&amp;lt;int&amp;gt; a, set&amp;lt;int&amp;gt; b); void printOr(set&amp;lt;int&amp;gt; a, set&amp;lt;int&amp;gt; b); void printNot(set&amp;lt;int&amp;gt; a, set&amp;lt;int&amp;gt; b); void printXor(set&amp;lt;int&amp;gt; a, set&amp;lt;int&amp;gt; b); void printSet(set&amp;lt;int&amp;gt; a); int main() { set&amp;lt;int&amp;gt; setA; set&amp;lt;int&amp;gt; setB; int a,b; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b; for (int i=0;i&amp;lt;a;i++) { int temp; cin&amp;gt;&amp;gt;temp; setA.</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課16</title>
+      <link>http://localhost:1313/posts/2020-11-27-nctu-etutor16/</link>
+      <pubDate>Fri, 27 Nov 2020 20:26:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-27-nctu-etutor16/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+回家功課16  以 ^Z 結束輸出 （測資可能有很多行），不是 ^Z 的話就把輸入進來的字串 temp 加進 sentence 裡 最後要處理的字串為 sentence ， temp 只是暫時拿來輸入的變數 （temporary） 宣告長度為 26 的陣列，並初始化為 0 （因為不分大小寫的字母有 26 個） 第 0 個代表 A 或 a 、第 1 個代表 B 或 b . . . 以此類推 用 for 迴圈遍歷 sentence 的每一個字元，分成大寫、小寫和其他 用 ASCII 判斷，如果是大寫就  alphabet[sentence[i]-&amp;#39;A&amp;#39;]++;  舉例：當 sentence[10] 為 F （ACSII：70） 剪掉 A （ASCII：65） 會等於 5 ，則 alphabet[5] 會 +1 小寫以此類推 其他符號或空格則不考慮，跳過 （continue） 判斷最大值與記錄位置，就把 alphabet 這陣列遍歷過就行了  程式碼大概如下：</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] 進制轉換 Part 2</title>
+      <link>http://localhost:1313/posts/2020-11-18-c&#43;&#43;-basetransform02/</link>
+      <pubDate>Wed, 18 Nov 2020 19:01:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-18-c&#43;&#43;-basetransform02/</guid>
+      <description>這次是把 etutor 的作業做延伸，並且用 STL 中的 map 實作！上一次是用 vector 來實作延伸閱讀：C++ 進制轉換 map  map 的概念就是 映射 由數個數對構成 數對是以 key : value 的形式存在 任一 key 可對到其 value 同一個 key 不會有不同 value ，像是 函數 定義  ※ 因為程式碼有高度重複性，所以就貼一部分而已 程式碼大概如下： 使用 map 建表  map&amp;lt;string, string&amp;gt; dicHex = { {&amp;#34;0&amp;#34;, &amp;#34;0000&amp;#34;}, {&amp;#34;1&amp;#34;, &amp;#34;0001&amp;#34;}, {&amp;#34;2&amp;#34;, &amp;#34;0010&amp;#34;}, {&amp;#34;3&amp;#34;, &amp;#34;0011&amp;#34;}, {&amp;#34;4&amp;#34;, &amp;#34;0100&amp;#34;}, {&amp;#34;5&amp;#34;, &amp;#34;0101&amp;#34;}, {&amp;#34;6&amp;#34;, &amp;#34;0110&amp;#34;}, {&amp;#34;7&amp;#34;, &amp;#34;0111&amp;#34;}, {&amp;#34;8&amp;#34;, &amp;#34;1000&amp;#34;}, {&amp;#34;9&amp;#34;, &amp;#34;1001&amp;#34;}, {&amp;#34;a&amp;#34;, &amp;#34;1010&amp;#34;}, {&amp;#34;b&amp;#34;, &amp;#34;1011&amp;#34;}, {&amp;#34;c&amp;#34;, &amp;#34;1100&amp;#34;}, {&amp;#34;d&amp;#34;, &amp;#34;1101&amp;#34;}, {&amp;#34;e&amp;#34;, &amp;#34;1110&amp;#34;}, {&amp;#34;f&amp;#34;, &amp;#34;1111&amp;#34;}, {&amp;#34;A&amp;#34;, &amp;#34;1010&amp;#34;}, {&amp;#34;B&amp;#34;, &amp;#34;1011&amp;#34;}, {&amp;#34;C&amp;#34;, &amp;#34;1100&amp;#34;}, {&amp;#34;D&amp;#34;, &amp;#34;1101&amp;#34;}, {&amp;#34;E&amp;#34;, &amp;#34;1110&amp;#34;}, {&amp;#34;F&amp;#34;, &amp;#34;1111&amp;#34;}, {&amp;#34;0000&amp;#34;, &amp;#34;0&amp;#34;}, {&amp;#34;0001&amp;#34;, &amp;#34;1&amp;#34;}, {&amp;#34;0010&amp;#34;, &amp;#34;2&amp;#34;}, {&amp;#34;0011&amp;#34;, &amp;#34;3&amp;#34;}, {&amp;#34;0100&amp;#34;, &amp;#34;4&amp;#34;}, {&amp;#34;0101&amp;#34;, &amp;#34;5&amp;#34;}, {&amp;#34;0110&amp;#34;, &amp;#34;6&amp;#34;}, {&amp;#34;0111&amp;#34;, &amp;#34;7&amp;#34;}, {&amp;#34;1000&amp;#34;, &amp;#34;8&amp;#34;}, {&amp;#34;1001&amp;#34;, &amp;#34;9&amp;#34;}, {&amp;#34;1010&amp;#34;, &amp;#34;a&amp;#34;}, {&amp;#34;1011&amp;#34;, &amp;#34;b&amp;#34;}, {&amp;#34;1100&amp;#34;, &amp;#34;c&amp;#34;}, {&amp;#34;1101&amp;#34;, &amp;#34;d&amp;#34;}, {&amp;#34;1110&amp;#34;, &amp;#34;e&amp;#34;}, {&amp;#34;1111&amp;#34;, &amp;#34;f&amp;#34;} };  確認數字是否為有效的 （有 checkBin 、 checkOct 、 checkHex）  bool checkBin(string number) { int length = number.</description>
+    </item>
+    
+    <item>
+      <title>[介紹] 線上解題系統 OnlineJudge</title>
+      <link>http://localhost:1313/posts/2020-11-07-introduce-onlinejudge/</link>
+      <pubDate>Sat, 07 Nov 2020 10:41:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-07-introduce-onlinejudge/</guid>
+      <description>簡介 Online Judge 通常會簡稱 Judge 或者是 OJ 。那 Judge 是什麼呢？你可以想成它是一個練習 程式解題 的平臺，有 題目敘述 、 輸入 、 輸出 ，有時候甚至還會有 測資限制 或是 時間限制 ！ 什麼是程式呢？ 就是把生活中遇到的問題，嘗試用數學、邏輯，甚至是演算法，將問題簡單化！個人認為解題就有點呆板了！因為輸入、輸出，已經被限制了，所以產生的程式可能大同小異，或者是不用某種特定方法就逾時（後面會介紹），解不出來 . . . 推薦的 Online Judge TCGS Green Judge 臺中女中程式解題系統
+ 此 Judge 是由臺中女中所架的，掛在 tcgs.tc.edu.tw 的 Domain Name 上。 題目分類清楚 若基礎題庫的五十題做完，就有一定的程式基礎囉！  ZeroJudge 高中生程式解題系統
+ 較 Green Judge ， ZeroJudge 的題目分類較雜亂 可以利用 章魚教學網站 的題庫分類系統，來選取自己需要練習的題型（左邊選單 &amp;ndash;&amp;gt; 資訊學科培訓 &amp;ndash;&amp;gt; zerojudge 題目分類）  如果你的英文很好，再來的資源很適合你！LeetCode
+ 聽說業界面試很常看這個（不負責😂）  HackerRank</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] 期中考第三題</title>
+      <link>http://localhost:1313/posts/2020-11-06-ncyu-midterm03/</link>
+      <pubDate>Fri, 06 Nov 2020 14:07:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-06-ncyu-midterm03/</guid>
+      <description>期中考第三題：兌換瓶子  每 7 個喝完的瓶子，可以再兌換一瓶 drink 代表還沒喝的，bottle 代表喝完的瓶子 先把一開始的飲料都喝完  int bottle = drink;  如果一開始的飲料大於等於 7 瓶，就繼續兌換（while 迴圈） 每兌換一次就喝掉 1 瓶，兌換 n 次就喝掉 n 瓶 把上一次喝掉的瓶子跟不足兌換的瓶子收集起來，再拿去兌換 最後不夠兌換（瓶子&amp;lt; 7），就結束了（跳出 while 迴圈） 這時候的 bottle 就會是全部喝完的瓶子 TCGS Judge 類似題目：TCGS a041：收集冰棒棍  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { int drink; while(cin&amp;gt;&amp;gt;drink){ int bottle = drink; while(drink &amp;gt;= 7){ bottle += drink/7; drink = drink/7 + drink%7; } cout&amp;lt;&amp;lt;bottle&amp;lt;&amp;lt;endl; } } </description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] 期中考第二題</title>
+      <link>http://localhost:1313/posts/2020-11-06-ncyu-midterm02/</link>
+      <pubDate>Fri, 06 Nov 2020 12:40:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-06-ncyu-midterm02/</guid>
+      <description>期中考第二題：提款卡密碼  a b c d . . . 照順序排序，計算他們相間的距離 將上述做法具現化，可以利用 ASCII 將兩字元的 ASCII 相減，就是他們之間的距離 因為差有可能為負，且距離不為負，所以加上 &amp;lt;cmath&amp;gt; 的 abs() 絕對值 超過 9 之後，則取個位數字，可以利用 % 來實現 ASCII 欲做運算需將它轉形態（cast），所以利用 int 轉為整數形態 for 迴圈遍歷 word 中每一個字元，且索引 i 與 i+1 的值 注意上述做法 i 會跑到 &amp;lt; length-1 ZeroJudge 類似題目：Zerojudge a065：提款卡密碼  參考程式碼：
+#include &amp;lt;iostream&amp;gt;#include &amp;lt;cmath&amp;gt;using namespace std; int main() { string word; cin&amp;gt;&amp;gt;word; int length = word.size(); for(int i=0;i&amp;lt;length-1;i++){ cout&amp;lt;&amp;lt;int ( abs(word[i+1]-word[i]) ) % 10; } cout&amp;lt;&amp;lt;endl; } </description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] 進制轉換</title>
+      <link>http://localhost:1313/posts/2020-11-04-c&#43;&#43;-basetransform/</link>
+      <pubDate>Wed, 04 Nov 2020 21:12:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-04-c&#43;&#43;-basetransform/</guid>
+      <description>可能是因為高中課業繁忙吧，當初覺得 STL 對我來說太多餘了，所以就沒興趣學了，也就放掉了。這次重拾 STL ，先從簡單的 vector 來練練手，並用進制轉換當做主題！※ STL 是 Standrad Template Library 的縮寫  十進位轉二進位：
+ 以二進位定義計算 並將每次的結果插入 vector 的起點（後面解釋為什麼是 insert ） 傳入：整數（int） 回傳：陣列（vector）  vector&amp;lt;int&amp;gt; baseBinary(int number){ vector&amp;lt;int&amp;gt; result; vector&amp;lt;int&amp;gt;::iterator it; while(number&amp;gt;0){ it = result.begin(); if (number%2==0) result.insert(it,0); else result.insert(it,1); number /= 2; } return result; } 印出二進位：
+ 因為二進位算完後，答案是結果往前推，所以用的是 insert 這樣一來陣列遍歷就從 begin 就好了 iterator 有點像是 for vector 的 指標 ，想要知道其中的值要 取值 （*） 傳入：陣列（vector） 回傳：無（void）  void print(vector&amp;lt;int&amp;gt; number){ vector&amp;lt;int&amp;gt;::iterator it; for(it=number.</description>
+    </item>
+    
+    <item>
+      <title>[Python] 估計圓周率</title>
+      <link>http://localhost:1313/posts/2020-11-04-python-pi/</link>
+      <pubDate>Wed, 04 Nov 2020 00:12:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-04-python-pi/</guid>
+      <description>利用圓的定義以及圓跟正方形的關係，進而推算出圓周率！
+import random times = 99999 circle = 0 for _ in range( times ) : x = random.uniform(0.0,1.0) y = random.uniform(0.0,1.0) distance = x**2 + y**2 if distance &amp;lt; 1 : circle += 1 pi = 4 * circle / times print(pi) </description>
+    </item>
+    
+    <item>
+      <title>[Python] 矩陣運算</title>
+      <link>http://localhost:1313/posts/2020-11-02-linearalgebra-matrix/</link>
+      <pubDate>Mon, 02 Nov 2020 21:53:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-11-02-linearalgebra-matrix/</guid>
+      <description>因為 Linear Algebra 的 sheng 哥出題不手軟，所以就把矩陣的各種運算都寫好了！以免上機的時候腦袋卡住 . . .
+行列式：
+ 利用遞迴將陣列縮小，並算出行列式值 遞迴終點為 length==2 （二階行列式定義） 計算原理是 first row 計算 回傳：數字（number）  def determinant(m) : length = len(m) if length &amp;gt; 2 : result = 0 coe = [] for i in range(length) : coe.append( (-1)**(i)*m[0][i] ) matrix = [] for j in range(1,length) : row = [] for k in range(length) : if k != i : row.append(m[j][k]) matrix.append(row) result += coe[i]*determinant(matrix) return result else : return m[0][0]*m[1][1]-m[1][0]*m[0][1] 轉置矩陣：</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU TA課練習03</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-ta03/</link>
+      <pubDate>Fri, 30 Oct 2020 22:21:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-ta03/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; using namespace std; int checkA(int *a, int *b, int *guess); int checkB(int *a, int *b); int main() { int answer[4]; int answerNumber[11] = {0}; for(int i=0;i&amp;lt;4;i++){ cin&amp;gt;&amp;gt;answer[i]; answerNumber[answer[i]]++; } int counter = 1; int guess[4]; while(cin&amp;gt;&amp;gt;guess[0]&amp;gt;&amp;gt;guess[1]&amp;gt;&amp;gt;guess[2]&amp;gt;&amp;gt;guess[3]){ int guessNumber[11] = {0}; for(int i=0;i&amp;lt;4;i++){ guessNumber[guess[i]]++; } int answerA = checkA(answer,guess,guessNumber); int answerB = checkB(answerNumber,guessNumber); cout&amp;lt;&amp;lt;&amp;#34;Case &amp;#34;&amp;lt;&amp;lt;counter&amp;lt;&amp;lt;&amp;#34;: &amp;#34;&amp;lt;&amp;lt;answerA&amp;lt;&amp;lt;&amp;#34;A&amp;#34;&amp;lt;&amp;lt;answerB&amp;lt;&amp;lt;&amp;#34;B&amp;#34;&amp;lt;&amp;lt;endl; if ( answerA==4 &amp;amp;&amp;amp; answerB==0 ) break; else counter++; } } int checkA(int *a, int *b, int *guess){ int A = 0; for(int i=0;i&amp;lt;4;i++){ if (a[i]==b[i]){ guess[b[i]] = -1; A++; } } return A; } int checkB(int *a, int *b){ int B = 0; for(int i=1;i&amp;lt;10;i++){ if ( b[i]==a[i] &amp;amp;&amp;amp; b[i]!</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課11</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-etutor11/</link>
+      <pubDate>Fri, 30 Oct 2020 22:20:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-etutor11/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+回家功課11  while 是迴圈的一種，只要條件成立（ture），就繼續執行 因為 1 在程式裡可以代表 true ，所以 while(1) or while(true) 就會是無窮迴圈，通常搭配 break 來跳脫迴圈 用一變數來記錄次數，若變數不初始化就做對自己運算則會錯誤：  int number; number++; // number = number +1; cout&amp;lt;&amp;lt;number; // 輸出結果會是亂數，因為電腦不知道 number 是多少  判斷奇偶數之前教過囉，可以參考 課堂練習02  程式碼大概如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { while(1){ int n; cin&amp;gt;&amp;gt;n; if ( n == -1 ) break; int counter = 0; while(1){ if ( n%2==0 ){ counter++; n /= 2; } else break; } cout&amp;lt;&amp;lt;counter&amp;lt;&amp;lt;endl; } }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課10</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-etutor10/</link>
+      <pubDate>Fri, 30 Oct 2020 22:19:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-etutor10/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; using namespace std; int gcd(int x, int y){ while(y!=0){ int tmp = x%y; x = y; y = tmp; } return x; }; int main() { int a,b; while(cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b){ int GCD = gcd(a,b); cout&amp;lt;&amp;lt;GCD&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;a*b/GCD&amp;lt;&amp;lt;endl; } }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課09</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-etutor09/</link>
+      <pubDate>Fri, 30 Oct 2020 22:18:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-etutor09/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+回家功課09  先觀察圖形：  輸入 3 就會有 3 行 3 列、輸入 5 就會有 5 行 5 列，所以輸入 n 就會有 n 行 n 列 第一列的 o 在最中間、第 n 列的 o 從中間往兩邊增加，而且最中間那列全為 o （最中間怎麽用 n 表示呢？） 不是 x 的地方就是 o o 的變化很像 擴散 ，每多一行 o 就往兩邊擴散一個，經過中間那列之後，就開始 縮減 要注意是小寫 xo ！！！！    程式碼大概如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { int n; cin&amp;gt;&amp;gt;n; int center = n/2+1; int offset = 0; for(int row=1;row&amp;lt;=n;row++){ for(int col=1;col&amp;lt;=n;col++){ if ( col&amp;gt;center+offset || col&amp;lt;center-offset ) cout&amp;lt;&amp;lt;&amp;#34;x&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;o&amp;#34;; } if ( row&amp;lt;center ) offset++; else offset--; cout&amp;lt;&amp;lt;endl; } } 1 2 3 4 5 6 7 1 2 3 4 5 6 7 1 2 3 4 5 6 7 1 2 3 4 5 6 7 1 2 3 4 5 6 7 1 2 3 4 5 6 7 1 2 3 4 5 6 7 x x x o x x x x x o o o x x x o o o o o x o o o o o o o x o o o o o x x x o o o x x x x x o x x x  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU TA課練習02</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-ta02/</link>
+      <pubDate>Fri, 30 Oct 2020 22:17:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-ta02/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { string number; cin&amp;gt;&amp;gt;number; int length = number.size(); for(int i=length-1;i&amp;gt;=0;i--){ if ( number[i]-48!=0 ){ length = i; break; } } for(int i=length;i&amp;gt;=0;i--) cout&amp;lt;&amp;lt;number[i]; cout&amp;lt;&amp;lt;endl; }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU TA課練習01</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-ta01/</link>
+      <pubDate>Fri, 30 Oct 2020 22:16:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-ta01/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; int main() { int t; cin&amp;gt;&amp;gt;t; while(t&amp;gt;0){ int number[3]; cin&amp;gt;&amp;gt;number[0]&amp;gt;&amp;gt;number[1]&amp;gt;&amp;gt;number[2]; sort(number,number+3); reverse(number,number+3); cout&amp;lt;&amp;lt;number[0]&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;number[1]&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;number[2]&amp;lt;&amp;lt;endl; t--; } }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課08</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-etutor08/</link>
+      <pubDate>Fri, 30 Oct 2020 22:15:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-etutor08/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;sstream&amp;gt; using namespace std; int main() { int hour,minute,second; char symbol; int priorTime,currentTime; string time; stringstream prior,current; cin&amp;gt;&amp;gt;time; prior&amp;lt;&amp;lt;time; prior&amp;gt;&amp;gt;hour&amp;gt;&amp;gt;symbol&amp;gt;&amp;gt;minute&amp;gt;&amp;gt;symbol&amp;gt;&amp;gt;second; priorTime = hour*3600 + minute*60 + second; cin&amp;gt;&amp;gt;time; current&amp;lt;&amp;lt;time; current&amp;gt;&amp;gt;hour&amp;gt;&amp;gt;symbol&amp;gt;&amp;gt;minute&amp;gt;&amp;gt;symbol&amp;gt;&amp;gt;second; currentTime = hour*3600 + minute*60 + second; int delta = (currentTime - priorTime); delta = ( delta/3600 &amp;gt; 0 ) ? ( delta%3600 &amp;gt; 0 ) ? delta/3600 : delta/3600-1 : 0 ; cout&amp;lt;&amp;lt;delta*20&amp;lt;&amp;lt;endl; }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 回家功課07</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-etutor07/</link>
+      <pubDate>Fri, 30 Oct 2020 22:14:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-etutor07/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { string number; cin&amp;gt;&amp;gt;number; // firstLine  for(int i=0;i&amp;lt;3;i++){ switch(number[i]-48){ case 1: cout&amp;lt;&amp;lt;&amp;#34; *&amp;#34;; break; case 4: cout&amp;lt;&amp;lt;&amp;#34;* *&amp;#34;; break; default: cout&amp;lt;&amp;lt;&amp;#34;*****&amp;#34;; break; } if(i!=2) cout&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; // secondLine  for(int i=0;i&amp;lt;3;i++){ switch(number[i]-48){ case 1: case 2: case 3: case 7: cout&amp;lt;&amp;lt;&amp;#34; *&amp;#34;; break; case 5: case 6: cout&amp;lt;&amp;lt;&amp;#34;* &amp;#34;; break; default: cout&amp;lt;&amp;lt;&amp;#34;* *&amp;#34;; break; } if(i!=2) cout&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; // thirdLine  for(int i=0;i&amp;lt;3;i++){ switch(number[i]-48){ case 0: cout&amp;lt;&amp;lt;&amp;#34;* *&amp;#34;; break; case 1: case 7: cout&amp;lt;&amp;lt;&amp;#34; *&amp;#34;; break; default: cout&amp;lt;&amp;lt;&amp;#34;*****&amp;#34;; break; } if(i!</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習07</title>
+      <link>http://localhost:1313/posts/_2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9207/</link>
+      <pubDate>Fri, 30 Oct 2020 14:51:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/_2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9207/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習06</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/</link>
+      <pubDate>Fri, 30 Oct 2020 14:50:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9206/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題  關於輸出數字間都空格，最後一個不空格，有很多種做法，這裡提供兩種：  先輸出第一個數字，之後再接一個空格再一個數字  cout&amp;lt;&amp;lt;&amp;#34;第一個數字&amp;#34;; cout&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;&amp;#34;接下來的數字&amp;#34;;  也可以先數字加空格，最後再加一個數  cout&amp;lt;&amp;lt;&amp;#34;前面的數字&amp;#34;&amp;lt;&amp;lt;&amp;#34; &amp;#34;; cout&amp;lt;&amp;lt;&amp;#34;最後的數字&amp;#34;;  因為每一個大於等於 1 的整數，一定會有 1 這個因數，所以可以先印出 1 如此一來，迴圈就只要從 2 開始判斷 判斷到小於 number 就好（再看一次題目） 當迴圈結束，再換行（注意排版！）  程式碼大概如下：
+#include &amp;lt;iostream&amp;gt;using namespace std; int main() { int number; while(cin&amp;gt;&amp;gt;number){ cout&amp;lt;&amp;lt;&amp;#34;1&amp;#34;; for (int i=2;i&amp;lt;number;i++) if (number%i==0) cout&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;i; cout&amp;lt;&amp;lt;endl; } } 第二題  先拆解題目，分成階層跟取餘數 階層定義為 0! = 1, n! = 1 x 2 x ... x n 可以用迴圈做，並用一個變數儲存它（注意變數是否初始化，意思是應該要一開始就指派值） 取餘數問題，根據維基百科 ab mod n = [(a mod n)*(b mod n)]mod n 如果不清楚，就用數字舉例自己算算看！  程式碼大概如下：</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習05</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</link>
+      <pubDate>Fri, 30 Oct 2020 14:49:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9205/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題  邏輯判斷！按照題目敘述邏輯  #include&amp;lt;iostream&amp;gt;using namespace std; int main() { int y; cin&amp;gt;&amp;gt;y; if( ( y%4==0 &amp;amp;&amp;amp; y%100!=0 ) || y%400==0 ) cout&amp;lt;&amp;lt;&amp;#34;YES&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;NO&amp;#34;; } 第二題  輸出會有七種可能，慢慢討論 可以分成四種象限與其他部分  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { int x,y; cin&amp;gt;&amp;gt;x&amp;gt;&amp;gt;y; if ( x!=0 &amp;amp;&amp;amp; y!=0 ){ if ( x&amp;gt;0 ){ if ( y&amp;gt;0 ) cout&amp;lt;&amp;lt;&amp;#34;第一象限&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;第四象限&amp;#34;; } else{ if ( y&amp;gt;0 ) cout&amp;lt;&amp;lt;&amp;#34;第二象限&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;第三象限&amp;#34;; } } else{ if ( x==0 &amp;amp;&amp;amp; y==0 ) cout&amp;lt;&amp;lt;&amp;#34;原點&amp;#34;; else if ( x==0 ) cout&amp;lt;&amp;lt;&amp;#34;Y軸&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;X軸&amp;#34;; } } 第三題  可利用題目的年分來當作起使判斷（2019為己亥，以此類推） 也可用定義解（上網查） 天干地支分開判斷，case 數會比較少  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { int year; cin&amp;gt;&amp;gt;year; int x = year%10, y = year%12; switch(x){ case 4: cout&amp;lt;&amp;lt;&amp;#34;甲&amp;#34;; break; case 5: cout&amp;lt;&amp;lt;&amp;#34;乙&amp;#34;; break; case 6: cout&amp;lt;&amp;lt;&amp;#34;丙&amp;#34;; break; case 7: cout&amp;lt;&amp;lt;&amp;#34;丁&amp;#34;; break; case 8: cout&amp;lt;&amp;lt;&amp;#34;戊&amp;#34;; break; case 9: cout&amp;lt;&amp;lt;&amp;#34;己&amp;#34;; break; case 0: cout&amp;lt;&amp;lt;&amp;#34;庚&amp;#34;; break; case 1: cout&amp;lt;&amp;lt;&amp;#34;辛&amp;#34;; break; case 2: cout&amp;lt;&amp;lt;&amp;#34;壬&amp;#34;; break; case 3: cout&amp;lt;&amp;lt;&amp;#34;癸&amp;#34;; break; } switch(y){ case 4: cout&amp;lt;&amp;lt;&amp;#34;子&amp;#34;; break; case 5: cout&amp;lt;&amp;lt;&amp;#34;丑&amp;#34;; break; case 6: cout&amp;lt;&amp;lt;&amp;#34;寅&amp;#34;; break; case 7: cout&amp;lt;&amp;lt;&amp;#34;卯&amp;#34;; break; case 8: cout&amp;lt;&amp;lt;&amp;#34;辰&amp;#34;; break; case 9: cout&amp;lt;&amp;lt;&amp;#34;巳&amp;#34;; break; case 10: cout&amp;lt;&amp;lt;&amp;#34;午&amp;#34;; break; case 11: cout&amp;lt;&amp;lt;&amp;#34;未&amp;#34;; break; case 0: cout&amp;lt;&amp;lt;&amp;#34;申&amp;#34;; break; case 1: cout&amp;lt;&amp;lt;&amp;#34;酉&amp;#34;; break; case 2: cout&amp;lt;&amp;lt;&amp;#34;戌&amp;#34;; break; case 3: cout&amp;lt;&amp;lt;&amp;#34;亥&amp;#34;; break; } } 第四題  每個 char （字元）都會有一個值，稱為 ASCII 利用 ASCII 來確認該字是否在 小寫區間  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { char word; cin&amp;gt;&amp;gt;word; // a 97 z 122 A 65 Z 90  if ( 97&amp;lt;=word &amp;amp;&amp;amp; word&amp;lt;=122 ) cout&amp;lt;&amp;lt;&amp;#34;Character &amp;#34;&amp;lt;&amp;lt;word&amp;lt;&amp;lt;&amp;#34; is a lowercase letter.</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習04</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/</link>
+      <pubDate>Fri, 30 Oct 2020 14:48:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9204/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題  cin.ignore(長度,想跳過的字元) 用來忽略特定字元 string 有兩個函式 size() 跟 length() 都是回傳字串長度  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { string word; cin.ignore(100,&amp;#39;=&amp;#39;); cin&amp;gt;&amp;gt;word; cout&amp;lt;&amp;lt;word&amp;lt;&amp;lt;&amp;#34;, length=&amp;#34;&amp;lt;&amp;lt;word.size(); } 第二題  三角函數的函式是屬於 &amp;lt;cmath&amp;gt; 函式庫 #define 可把想替換的字換成另一個字，Pi 也可以用 float 、 double 存  #include &amp;lt;iostream&amp;gt;#include &amp;lt;cmath&amp;gt;#include &amp;lt;iomanip&amp;gt;#define Pi 3.14159 using namespace std; int main() { float a,b,c; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;c; cout&amp;lt;&amp;lt;setprecision(3)&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;a*b*sin(c*Pi/180.0)/2.0; } 第三題  先判斷分數（注意題目是大於等於），再判斷溫度及氣壓 邏輯運算子 || 是 or 、 &amp;amp;&amp;amp; 是 and  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { int score; cin&amp;gt;&amp;gt;score; if(score&amp;gt;=100) cout&amp;lt;&amp;lt;&amp;#34;High&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;Low&amp;#34;; cout&amp;lt;&amp;lt;endl; int tem,pre; cin&amp;gt;&amp;gt;tem&amp;gt;&amp;gt;pre; if( tem&amp;gt;=40 || pre&amp;gt;=200 ) cout&amp;lt;&amp;lt;&amp;#34;Warning&amp;#34;; else cout&amp;lt;&amp;lt;&amp;#34;OK&amp;#34;; cout&amp;lt;&amp;lt;endl; }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習03</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/</link>
+      <pubDate>Fri, 30 Oct 2020 14:47:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9203/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題  iomanip 是 C++ 管理 格式化輸出 的函式庫。  iomanip 官方文件
+ double 與 float 為浮點數宣告，可以儲存小數。 除數與被除數只要一者形態為浮點數，商就會是浮點數。 因為第二位無條件進位，加多少就會進位呢？  #include&amp;lt;iostream&amp;gt;#include&amp;lt;iomanip&amp;gt;using namespace std; int main() { double a,b; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b; double result = a/b; //1.623 -&amp;gt; 1.63  cout&amp;lt;&amp;lt;setprecision(2)&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;result+0.004; } 第二題  簡單的四則運算，不會忘記週長跟面積的算法吧！  #include&amp;lt;iostream&amp;gt;using namespace std; int main() { int a,b,c,d; cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;c&amp;gt;&amp;gt;d; cout&amp;lt;&amp;lt;(c-a)*(d-b)&amp;lt;&amp;lt;endl; cout&amp;lt;&amp;lt;(c-a+d-b)*2; }  如果有任何問題，歡迎私訊跟我討論喔！</description>
+    </item>
+    
+    <item>
+      <title>[C&#43;&#43;] NCYU 課堂練習02</title>
+      <link>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/</link>
+      <pubDate>Fri, 30 Oct 2020 14:46:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-30-ncyu-%E8%AA%B2%E5%A0%82%E7%B7%B4%E7%BF%9202/</guid>
+      <description>請不要直接抄寫程式碼！ 也請不要直接跳到程式碼部分，除非你已經寫好了，想要參考別人的寫法！
+第一題  &amp;lt;iostream&amp;gt; 是 C++ 負責管 cin 、 cout 的函式庫， 如果在前面加上 #include 代表引入後方的函式庫。  #include &amp;lt;iostream&amp;gt; 使用命名空間，否則每次打 cin 、 cout 都要在前面加上 std:: ，像是：  std::cout&amp;lt;&amp;lt;&amp;#34;Hello, world!&amp;#34;&amp;lt;&amp;lt;endl; using namespace std;   int 為整數宣告，每宣告一次就像電腦索取 4 bytes ，能夠存放 -231-1 ~ 231範圍的整數。
+  int 後面接著變數名，命名需符合規則（命名盡量要有意義），變數可以一開始給予數值，也可以之後再指派。
+  題目要輸入三個整數，並輸出它們相乘的結果。程式碼大概如下：
+  #include &amp;lt;iostream&amp;gt;using namespace std; int main() { int number1,number2,number3; cin&amp;gt;&amp;gt;number1&amp;gt;&amp;gt;number2&amp;gt;&amp;gt;number3; cout&amp;lt;&amp;lt;number1*number2*number3; } 第二題  % 是取餘數的意思。 / 是整數除法的意思。 10 / 3 = 3 .</description>
+    </item>
+    
+    <item>
+      <title>[記錄] Hello, world!</title>
+      <link>http://localhost:1313/posts/2020-10-29-first-article/</link>
+      <pubDate>Fri, 30 Oct 2020 00:19:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-29-first-article/</guid>
+      <description>其實我想建網站很久了但一直研究不出來XD最近研究出來惹！用的是 Github Pages，有興趣的可以查查看 ~ 這網站主要會放我學習的記錄以及程式筆記！有錯誤的地方也歡迎指正唷！</description>
+    </item>
+    
+  </channel>
+</rss>
