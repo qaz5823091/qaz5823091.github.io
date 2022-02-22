@@ -13,7 +13,7 @@ tags: [NCYU, Algorithm, Homework, Python]
 * NP-Complete：Nondeterministic Polynomial-time Complete
 * 影片中提到：
     - 0/1 Knapsack problem （旅客背包問題）
-    - Traveling salesperson problem 旅行推銷員問題）
+    - Traveling salesperson problem （旅行推銷員問題）
     - Partition problem （分割問題）
     - Art gallery problem （美術館問題）
 
