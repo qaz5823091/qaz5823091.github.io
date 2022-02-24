@@ -4,6 +4,7 @@ date: 2022-02-24T00:04:58+08:00
 author: "CPP"
 draft: false
 tags: [NCYU, SocketProgramming, Homework]
+summary: "國立嘉義大學網路程式設計作業，可觀摩但請勿抄襲。"
 ---
 
 ## 網路程式設計 Week2

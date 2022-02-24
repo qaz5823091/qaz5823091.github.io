@@ -4,6 +4,7 @@ date: 2022-02-18T21:01:40+08:00
 author: "CPP"
 draft: false
 tags: [NCYU, Algorithm, Homework, Python]
+summary: "國立嘉義大學演算法作業，可觀摩但請勿抄襲。"
 ---
 
 ## 演算法作業 Week1
