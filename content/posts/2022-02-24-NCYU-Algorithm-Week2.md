@@ -16,7 +16,8 @@ summary: "國立嘉義大學演算法作業，可觀摩但請勿抄襲。"
 
 ### 第二題
 ![demo](https://i.imgur.com/3QWngi5.png)
-* f(n) = O(n^2), c = 3, n0 = 0
+* f(n) = O(n^2), c = 3, n0 = <style color="red">21</style>
+    > **Note :** f(n) 可能為負，加上 `絕對值` 
 
 ### 第三題
 ```python
