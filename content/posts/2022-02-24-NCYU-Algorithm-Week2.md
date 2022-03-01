@@ -51,6 +51,7 @@ class Solution:
 * 花費時間：30 分鐘
 * 完成程度：完全靠自己
 * 想法：`while` 迴圈找出第一個不遞增的部分，就可以知道陣列旋轉幾次。而 `left` 跟 `right` shift `count` 次，最後利用 module 陣列長度得到真正的索引值（`temp_middle`）。
+    > **Note :** 找第一個不遞增值也可以透過 `Binary Search`
 
 ### 第四題
 ```python
