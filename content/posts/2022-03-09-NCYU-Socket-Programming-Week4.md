@@ -9,12 +9,49 @@ summary: "國立嘉義大學網路程式設計作業，可觀摩但請勿抄襲�
 
 ## 網路程式設計 Week4
 
+### 簡介 Simple TCP/IP Services
+簡單 TCP/IP 服務是用來測試的服務，總共有五個：
+* Echo      - port 7
+    - 就像 echo 的意思，打什麼就會回應什麼
+* Discard   - port 9
+    - 打什麼都不會回應
+* Daytime   - port 13
+    - 報時
+* Quote      - port 17
+    - 每日一語錄
+* CHARGEN   - port 19
+    - 字元產生器，不跳脫的話不會停止
+
+> **Note :** 簡單 TCP/IP 服務是 Windows 選用的功能，需手動開啟，請 [參考](https://blog.miniasp.com/post/2011/11/30/Simple-TCP-IP-Services-for-Socket-Development)。
+
 ### 第一題
-![demo](/images/echo_server_process.png)
-![demo](/images/echo_server_3way_handshake.png)
-![demo](/images/echo_server_request.png)
-![demo](/images/echo_server_response.png)
-![demo](/images/echo_server_end.png)
+* 打開 windows terminal ( or cmd )，並連線 Echo Server
+```console
+$ telnet localhost 7
+```
+
+* 輸入 `abc`，並用 `Ctrl + ]` 跳脫
+    > **Note :** 有些電腦輸入上述快捷鍵會變成 `全形括號` ，是因為微軟注音的關係。下載英文語言輸入法，切換成英文鍵盤，就解決囉！
+
+* 關閉連線並退出
+```console
+Windows Telnet > close
+```
+```console
+Windows Telnet > q
+```
+
+* 觀察封包
+    - 建立連線、傳遞訊息、接收訊息、結束連線
+    ![demo](/images/echo_server_process.png)
+    - 建立 TCP 連線（三方交握）
+    ![demo](/images/echo_server_3way_handshake.png)
+    - 傳遞訊息（Echo data 為 63 是 ASCII 值，代表 `c`）
+    ![demo](/images/echo_server_request.png)
+    - 接收訊息（觀察 `Src Port` 與 `Dst Port` 的關係，可看出是傳遞還是接收）
+    ![demo](/images/echo_server_response.png)
+    - 結束連線
+    ![demo](/images/echo_server_end.png)
 
 ### 第二題
 ```cpp
@@ -110,8 +147,21 @@ void printMenu() {
     return ;
 }
 ```
-![demo](/images/simple_tcp_ip_service_7.png)
-![demo](/images/simple_tcp_ip_service_9.png)
-![demo](/images/simple_tcp_ip_service_13.png)
-![demo](/images/simple_tcp_ip_service_17.png)
-![demo](/images/simple_tcp_ip_service_19.png)
+> **Note :** 只有 echo 跟 discard 需要傳遞訊息，其餘不用，而且 discard 不用回收訊息。
+
+
+* 執行結果
+    - Echo 結果應跟傳遞訊息一樣
+    ![demo](/images/simple_tcp_ip_service_7.png)
+    - Discard 不會有任何回覆訊息
+    ![demo](/images/simple_tcp_ip_service_9.png)
+    - 就是報時
+    ![demo](/images/simple_tcp_ip_service_13.png)
+    - 每日一句
+    ![demo](/images/simple_tcp_ip_service_17.png)
+    - 字元產生（有限制長度 `1024 bytes`）
+    ![demo](/images/simple_tcp_ip_service_19.png)
+
+### 本週心得
+因為 `winsock` 是很早期用 `C LANG` 開發的，很多東西都要用到 C，例如訊息的傳遞就是用 `Char Array`，
+如果是用 `C++` 寫的話，就要透過其他函式來變成 `String`，下次試著用 C 來寫作業好了！
