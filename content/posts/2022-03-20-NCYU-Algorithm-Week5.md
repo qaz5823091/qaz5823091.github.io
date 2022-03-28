@@ -7,7 +7,7 @@ tags: [NCYU, Algorithm, Homework, Python]
 summary: "國立嘉義大學演算法作業，可觀摩但請勿抄襲。"
 ---
 
-## 演算法作業 Week4
+## 演算法作業 Week5
 
 ## 第一題
 I.
