@@ -227,6 +227,10 @@ void showError(std::string message) {
     return ;
 }
 ```
+* 執行結果：
+![demo](/images/proxy_server_time.png)
+![demo](/images/proxy_server_ask.png)
+![demo](/images/proxy_server_ask_result.png)
 
 * C 語言對於字串處理真的好麻煩...
 
