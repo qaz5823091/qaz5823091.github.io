@@ -188,3 +188,8 @@ class Solution:
 
 一口氣解完上面這些題目後，犒賞自己看個電影，二刷 `Inception`（臺灣翻譯：全面啟動、盜夢空間），推薦大家去看！
 ![demo](https://arielhsu.tw/wp-content/uploads/20190603035232_78.jpg)
+
+### 參考
+* [作業連結](https://hackmd.io/@wang1234/HJ000aAV5)
+* [Algo-Ch4-VD](https://www.youtube.com/watch?v=WNzm_IwNAQc)
+* [Algo-Ch4-FFT](https://www.youtube.com/watch?v=dUcf2RKQres)
