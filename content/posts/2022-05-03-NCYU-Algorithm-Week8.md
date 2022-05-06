@@ -105,4 +105,7 @@ class Solution:
 這次教的演算法滿酷的，是之前都沒有接觸過得，而且還可以在生活中找到一些演算法的足跡！
 
 ### 參考
-* [allenlin316 - Github](https://github.com/allenlin316)
+* [allenlin316 - Github](https://github.com/allenlin316)\
+* [作業說明](https://hackmd.io/@wang1234/ry_AVjPHc)
+* [Algo-Ch4-VD](https://www.youtube.com/watch?v=WNzm_IwNAQc)
+* [Algo-Ch4-FFT](https://www.youtube.com/watch?v=dUcf2RKQres)
