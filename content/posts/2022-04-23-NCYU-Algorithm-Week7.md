@@ -190,6 +190,6 @@ class Solution:
 ![demo](https://arielhsu.tw/wp-content/uploads/20190603035232_78.jpg)
 
 ### 參考
-* [作業連結](https://hackmd.io/@wang1234/HJ000aAV5)
-* [Algo-Ch4-VD](https://www.youtube.com/watch?v=WNzm_IwNAQc)
-* [Algo-Ch4-FFT](https://www.youtube.com/watch?v=dUcf2RKQres)
+* [作業說明](https://hackmd.io/@wang1234/HJ000aAV5)
+* [Algo-Ch4(1)](https://www.youtube.com/watch?v=W44uG-ezRBk)
+* [Algo-Ch4(2)](https://www.youtube.com/watch?v=UtLpgh8nGUk)
