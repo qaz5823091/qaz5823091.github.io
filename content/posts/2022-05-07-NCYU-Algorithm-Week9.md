@@ -58,7 +58,7 @@ i \ j | 1 | 2 | 3 | 4 | 5 | 6
     > lower bound: 96 + 0 = 96
 
 * without arc 6-7 （matrix 同 original）
-    > lower bound: 96 + 0 + 5 = 111
+    > lower bound: 96 + 0 + 5 = 101
 
 * with arc 3-5 (reduce row 3 and column 5)
 i \ j | 1 | 2 | 3 | 4 | 6
@@ -71,7 +71,7 @@ i \ j | 1 | 2 | 3 | 4 | 6
     > lower bound: 96 + 0 = 96
 
 * without arc 3-5 （matrix 同 with arc 6-7）
-    > lower bound: 96 + 1 + 3 = 100
+    > lower bound: 96 + 1 + 17 = 114
 
 ### 第四題
 ```python
