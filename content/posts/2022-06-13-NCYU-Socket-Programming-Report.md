@@ -4,7 +4,7 @@ date: 2022-06-13T23:02:37+08:00
 author: "CPP"
 draft: false
 tags: [NCYU, Algorithm, Homework, Python]
-summary: "國立嘉義大學演算法作業，可觀摩但請勿抄襲。"
+summary: "國立嘉義大學網路程式設計專題，可觀摩但請勿抄襲。"
 ---
 
 ## Leave Your Behind! 留下你的足跡！
