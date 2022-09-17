@@ -56,7 +56,7 @@ showtoc = true
 
   [params.homeInfoParams]
   Title = "有問題歡迎聯繫我！"
-  Content = "Content me !"
+  Content = "Contact me !"
 
   [[params.socialIcons]]
   name = "github"
