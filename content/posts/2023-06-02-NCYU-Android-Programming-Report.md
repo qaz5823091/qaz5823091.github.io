@@ -518,7 +518,7 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ---
 
-##### ReadFragment
+#### ReadFragment
 CRUD 裡的 `Read`，可以看到電影的詳細資訊
 
 ```kotlin
@@ -534,7 +534,7 @@ viewModel.getOneMovie(id).observe(viewLifecycleOwner) {
 
 ---
 
-##### EditFragment.kt
+#### EditFragment.kt
 CRUD 裡的 `Update`，更新電影資訊
 
 結合 `ReadFragment`、跟 `AddFragment` 的部分功能
