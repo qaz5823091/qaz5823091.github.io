@@ -40,6 +40,8 @@ data class Movie(
 
 `toString()` 用來 debug 用的
 
+---
+
 #### MovieDao.kt
 ```kotlin
 @Dao
@@ -71,6 +73,8 @@ DAO （Database Access Object）分成增刪查改，
 	* 型別都需要宣告成 `ListData` 是為了後面可以使用 `observe`
 * 改：`update()` 帶入修改的 `Movie`，它會自動對 `id` 更新
 
+---
+
 #### MovieRepository.kt
 ```kotlin
 class MovieRepository(val dao: MovieDao) {
@@ -101,6 +105,8 @@ class MovieRepository(val dao: MovieDao) {
 ```
 
 實作 `MovieDao` 的內容
+
+---
 
 #### MovieViewModel.kt
 ```kotlin
@@ -135,6 +141,8 @@ class MovieViewModel(application: Application): AndroidViewModel(application) {
 ```
 
 從 `AppDatabase` 得到實例 `instance` 並實作 `ViewModel` 能使用的函式
+
+---
 
 ### Database
 #### AppDatabase.kt
@@ -171,9 +179,13 @@ abstract class AppDatabase: RoomDatabase() {
 
 如果不想寫直接 cascaded `fallbackToDestructiveMigration()` 就不用遷移資料了！
 
+---
+
 ### Activity
 #### MainActivity.kt
 控制全部程式的邏輯，包含 `Toolbar`、`Navigation`、`Permission`
+
+---
 
 ##### 取得權限
 ```kotlin
@@ -204,8 +216,12 @@ private fun requestPermission(permission: String) {
     tools:ignore="ScopedStorage" />
 ```
 
+---
+
 #### SharedActivity.kt
 控制風格客製化的邏輯，包含 `FAB(Floating Action Button)` （`返回`、`截圖`、`分享` 功能），還有 `ViewPager` 以及 `TabLayout`
+
+---
 
 ##### 渲染 Fragment
 ```kotlin
@@ -226,6 +242,8 @@ override fun getPageTitle(position: Int) = when (position) {
 }
 ```
 
+---
+
 ##### 綁定 TabLayout
 ```kotlin
 tabLayout.setupWithViewPager(viewPager)
@@ -242,6 +260,8 @@ tabLayout.setOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
 ```
 也可以不只左滑、右滑切換 `Fragment`，點上面 `Tab` 也可以！
 
+---
+
 ##### 返回主畫面
 ```kotlin
 fabBack.setOnClickListener {
@@ -250,6 +270,8 @@ fabBack.setOnClickListener {
 ```
 
 會自動 return 到 `MainActivity`
+
+---
 
 ##### 下載圖片
 ```
@@ -263,6 +285,8 @@ screenshot = Bitmap.createBitmap(view.measuredWidth, view.measuredHeight, Bitmap
 ```xml
 app:layout_constraintDimensionRatio="H,9:16"
 ```
+
+---
 
 ##### 分享到 IG
 ```kotlin
@@ -278,6 +302,8 @@ private fun shareToInstagram(imageUri: Uri?) {
 
 比我想象的還要簡單，把圖片下載下來，並把 `Uri` 傳入 `setDatAndType()`，並 start 這個 `Intent`
 
+---
+
 ### Fragments
 從 `MainActivity` 控制四個 `Fragment`，從 `Use Case` 的方式切入
 
@@ -287,12 +313,16 @@ CRUD 裡的 `Read`，可以看到所有的電影，
 
 之後的 `SharedFragment` 都是做一樣的事
 
+---
+
 ##### 綁定 Adapter
 ```kotlin
 itemAdapter = ItemAdapter(displayItems)
 binding.recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 binding.recyclerView.adapter = itemAdapter
 ```
+
+---
 
 ##### Swipe 功能
 用到別人的套件，可以從下面的參考找
@@ -323,6 +353,8 @@ ItemTouchHelper.RIGHT -> {
 往左滑刪除，但不是真的刪除，可以從 `MutableList` 裡復原
 
 往右滑編輯開一個 `EditFragment` 並傳入 `id`，但是是用 `Navigation` 引導
+
+---
 
 ##### 向下滑更新
 也是用到別人的套件，下面參考也找得到
@@ -365,6 +397,8 @@ fun updateAllMovies(movies: MutableList<Movie>) {
 ```
 
 更新其實是把資料庫全部 delete 掉，再重新 insert 上去
+
+---
 
 ##### 長按更改排名
 跟 `Swipe` 功能是同個套件
@@ -409,6 +443,8 @@ fun onItemMove(fromPosition: Int, toPosition: Int): Boolean {
 
 我想很久🥲
 
+---
+
 ##### 兩個 FAB 功能
 ```kotlin
 binding.fab.setOnClickListener {
@@ -423,6 +459,8 @@ binding.fabExport.setOnClickListener {
 ```
 
 一個帶到 `AddFragment`，另一個帶到 `SharedActivity`
+
+---
 
 #### AddFragment.kt
 CRUD 裡的 `Create`，可以新增電影，輸入標題、評分、評論
@@ -478,6 +516,8 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 簡單判斷標題是不是空的，空的就不能新增
 
+---
+
 ##### ReadFragment
 CRUD 裡的 `Read`，可以看到電影的詳細資訊
 
@@ -492,12 +532,16 @@ viewModel.getOneMovie(id).observe(viewLifecycleOwner) {
 
 做的事簡單很多，把傳入的 `id`，透過 `getOneMove` 用 `observe()` 的方法設定畫面
 
+---
+
 ##### EditFragment.kt
 CRUD 裡的 `Update`，更新電影資訊
 
 結合 `ReadFragment`、跟 `AddFragment` 的部分功能
 
 （ViewModel 的 observe 跟 電影標題是否為空的判斷）
+
+---
 
 ### SharedFragments
 ```kotlin
@@ -544,6 +588,8 @@ override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
 渲染畫面，並設定跑馬燈效果（間隔 1500ms），可以再下面的參考看到
 
+---
+
 #### SharedItemAdapter.kt
 ```kotlin
 override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): ViewHolder {
@@ -561,6 +607,8 @@ override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): ViewHolder
 ```
 
 渲染不同風格的 `item` 並傳入 `LayoutInflater`
+
+---
 
 ### 結論
 最後就這樣作出 MCM APP 了！
