@@ -92,7 +92,7 @@ END main
 ```
 
 ### 結果
-![demo](https://hackmd.io/_uploads/HJVBnRS8h.png)
+![demo](/images/assembly_result_1.png)
 
 
 ## 第二題
@@ -283,7 +283,7 @@ ZellersCongruence ENDP
 END main
 ```
 ### 結果
-![demo](https://hackmd.io/_uploads/ry2KtyIIh.png)
+![demo](/images/assembly_result_2.png)
 
 
 ## 第三題
@@ -352,7 +352,7 @@ END main
 ```
 
 ### 結果
-![demo](https://hackmd.io/_uploads/SkKHEGIIh.png)
+![demo](/images/assembly_result_3.png)
 
 
 ## 第四題
