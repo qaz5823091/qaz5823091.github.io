@@ -269,9 +269,9 @@ deploy-prod:
 - docker （推薦用這個）
 
 安裝記錄就不寫了，放幾個當時遇到問題的圖片以及 references：
-![demo](https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_fbf25dd286eda84c01ad6306cbf5da01.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1693464151&Signature=6KJzbSdRuJvjKRiON6rtEEWknIg%3D)
-![demo](https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_9ec5ea8445dd54534465ab47f2ead72b.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1693464177&Signature=l%2Fzu14ZDCcTnluCJvkhfp0BdWmE%3D)
-![demo](https://hackmd-prod-images.s3-ap-northeast-1.amazonaws.com/uploads/upload_f8ddc98225d43c28f542a8b609d21fa4.png?AWSAccessKeyId=AKIA3XSAAW6AWSKNINWO&Expires=1693464199&Signature=adDt4Btqwbg52INaAmamhbEoBBk%3D)
+![demo](/images/gitlab_enable_runner.png)
+![demo](/images/gitlab_restart_runner.png)
+![demo](/images/gitlab_runner_install.png)
 
 - [Change Gitlab CI Runner user](https://stackoverflow.com/questions/37187899/change-gitlab-ci-runner-user)
 - [Registering runners](https://docs.gitlab.com/runner/register/index.html#docker)
