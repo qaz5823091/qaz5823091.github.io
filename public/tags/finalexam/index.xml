@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FinalExam on 羲加加的部落格</title>
+    <link>https://qaz5823091.github.io/tags/finalexam/</link>
+    <description>Recent content in FinalExam on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Jun 2023 20:25:00 +0800</lastBuildDate><atom:link href="https://qaz5823091.github.io/tags/finalexam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[期末] AssemblyLanguage Final Exam</title>
+      <link>https://qaz5823091.github.io/posts/2023-06-08-ncyu-assemblylanguage-final-exam/</link>
+      <pubDate>Thu, 08 Jun 2023 20:25:00 +0800</pubDate>
+      
+      <guid>https://qaz5823091.github.io/posts/2023-06-08-ncyu-assemblylanguage-final-exam/</guid>
+      <description>國立嘉義大學組合語言與實習期末考題。</description>
+    </item>
+    
+  </channel>
+</rss>

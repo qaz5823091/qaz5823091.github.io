@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Introduction on 羲加加的部落格</title>
+    <link>https://qaz5823091.github.io/tags/introduction/</link>
+    <description>Recent content in Introduction on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Nov 2020 10:41:00 +0800</lastBuildDate><atom:link href="https://qaz5823091.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[介紹] 線上解題系統 OnlineJudge</title>
+      <link>https://qaz5823091.github.io/posts/2020-11-07-introduce-onlinejudge/</link>
+      <pubDate>Sat, 07 Nov 2020 10:41:00 +0800</pubDate>
+      
+      <guid>https://qaz5823091.github.io/posts/2020-11-07-introduce-onlinejudge/</guid>
+      <description>簡介 Online Judge 通常會簡稱 Judge 或者是 OJ 。 那 Judge 是什麼呢？ 你可以想成它是一個練習 程式解題 的平臺， 有 題目敘述 、 輸入 、 輸出 ， 有時候甚至還會有 測資限制 或是 時間限制 ！
+什麼是程式呢？ 就是把生活中遇到的問題， 嘗試用數學、邏輯，甚至是演算法，將問題簡單化！ 個人認為解題就有點呆板了！ 因為輸入、輸出，已經被限制了， 所以產生的程式可能大同小異， 或者是不用某種特定方法就逾時（後面會介紹），解不出來 . . .
+推薦的 Online Judge TCGS Green Judge 臺中女中程式解題系統
+此 Judge 是由臺中女中所架的，掛在 tcgs.tc.edu.tw 的 Domain Name 上。 題目分類清楚 若基礎題庫的五十題做完，就有一定的程式基礎囉！ ZeroJudge 高中生程式解題系統
+較 Green Judge ， ZeroJudge 的題目分類較雜亂 可以利用 章魚教學網站 的題庫分類系統，來選取自己需要練習的題型（左邊選單 &amp;ndash;&amp;gt; 資訊學科培訓 &amp;ndash;&amp;gt; zerojudge 題目分類） 如果你的英文很好，再來的資源很適合你！</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TA on 羲加加的部落格</title>
+    <link>https://qaz5823091.github.io/tags/ta/</link>
+    <description>Recent content in TA on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Sep 2022 01:35:01 +0800</lastBuildDate><atom:link href="https://qaz5823091.github.io/tags/ta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[助教] 基礎程式設計 Week 1</title>
+      <link>https://qaz5823091.github.io/posts/2022-09-18-ncyu-basic-programming-week1/</link>
+      <pubDate>Sun, 18 Sep 2022 01:35:01 +0800</pubDate>
+      
+      <guid>https://qaz5823091.github.io/posts/2022-09-18-ncyu-basic-programming-week1/</guid>
+      <description>國立嘉義大學基礎程式設計解題筆記，請勿抄襲。</description>
+    </item>
+    
+  </channel>
+</rss>
