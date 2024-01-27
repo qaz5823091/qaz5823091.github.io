@@ -10,7 +10,10 @@ summary: "Only test"
 ## Success?
 yes
 
+
 原本想幫部落格新增廣告 Google Ad Sense，發現標題下方的 `datetime` 跑掉了，看到 Github Actions 噴錯，以為是自動化的工具太舊了，所以就去更新 `workflow` 的內容，不過時間還是沒有跑回來。
+
+![demo](/images/github_actions_test.png)
 
 後來想到可能是 `hugo` 版本太舊，所以就去更新它，也順便更新了 `keyring` 還有系統，結果咧！事情沒那個簡單！！！！！電腦壞了，系統壞了。
 
