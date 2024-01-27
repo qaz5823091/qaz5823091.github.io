@@ -42,7 +42,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
+          submodules: recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
