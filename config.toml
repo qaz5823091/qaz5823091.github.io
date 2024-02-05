@@ -1,7 +1,7 @@
 baseURL = "https://qaz5823091.github.io/"
 title = "羲加加的部落格"
 paginate = 5
-theme = "PaperMod"
+theme = "GithubPageThemes"
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
