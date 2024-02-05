@@ -1,0 +1,3 @@
+[submodule "themes/GithubPageThemes"]
+	path = themes/GithubPageThemes
+	url = git@github.com:qaz5823091/GithubPageTheme.git
