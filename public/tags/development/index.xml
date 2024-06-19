@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on 羲加加的部落格</title>
+    <link>http://localhost:1313/tags/development/</link>
+    <description>Recent content in Development on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Jun 2024 14:12:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[心得] 軟體開發實習 - 總覽</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-all/</link>
+      <pubDate>Sat, 08 Jun 2024 13:57:59 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-all/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+    <item>
+      <title>[心得] 軟體開發實習 - 總結篇</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-conclusion/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-conclusion/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+    <item>
+      <title>[心得] 軟體開發實習 - 社交篇</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-socials/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:02 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-socials/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+    <item>
+      <title>[心得] 軟體開發實習 - 技術篇</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-skills/</link>
+      <pubDate>Sat, 08 Jun 2024 14:11:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-skills/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+    <item>
+      <title>[心得] 軟體開發實習 - 準備篇</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-preparing/</link>
+      <pubDate>Sat, 08 Jun 2024 14:10:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-preparing/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+    <item>
+      <title>[心得] 軟體開發實習 - 前言篇</title>
+      <link>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-introduction/</link>
+      <pubDate>Sat, 08 Jun 2024 14:05:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2024-06-08-ncyu-intern-at-software-company-introduction/</guid>
+      <description>在軟體公司擔任軟體開發實習生之心得分享</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kdan on 羲加加的部落格</title>
+    <link>http://localhost:1313/tags/kdan/</link>
+    <description>Recent content in Kdan on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2023 22:26:13 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kdan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[練習] GitLab CI/CD</title>
+      <link>http://localhost:1313/posts/2023-08-29-kdan-gitlab-ci-cd/</link>
+      <pubDate>Tue, 29 Aug 2023 22:26:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2023-08-29-kdan-gitlab-ci-cd/</guid>
+      <description>Kdan Android Team 實習作業</description>
+    </item>
+  </channel>
+</rss>

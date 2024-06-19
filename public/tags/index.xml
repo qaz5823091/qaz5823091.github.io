@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 羲加加的部落格</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on 羲加加的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Jun 2024 14:12:29 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Development</title>
+      <link>http://localhost:1313/tags/development/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intern</title>
+      <link>http://localhost:1313/tags/intern/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/intern/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NCYU</title>
+      <link>http://localhost:1313/tags/ncyu/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ncyu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Share</title>
+      <link>http://localhost:1313/tags/share/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/share/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/tags/software/</link>
+      <pubDate>Sat, 08 Jun 2024 14:12:29 +0800</pubDate>
+      <guid>http://localhost:1313/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/tags/test/</link>
+      <pubDate>Sat, 27 Jan 2024 22:31:37 +0800</pubDate>
+      <guid>http://localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android</title>
+      <link>http://localhost:1313/tags/android/</link>
+      <pubDate>Tue, 29 Aug 2023 22:26:13 +0800</pubDate>
+      <guid>http://localhost:1313/tags/android/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD</title>
+      <link>http://localhost:1313/tags/ci/cd/</link>
+      <pubDate>Tue, 29 Aug 2023 22:26:13 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitlab</title>
+      <link>http://localhost:1313/tags/gitlab/</link>
+      <pubDate>Tue, 29 Aug 2023 22:26:13 +0800</pubDate>
+      <guid>http://localhost:1313/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kdan</title>
+      <link>http://localhost:1313/tags/kdan/</link>
+      <pubDate>Tue, 29 Aug 2023 22:26:13 +0800</pubDate>
+      <guid>http://localhost:1313/tags/kdan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Assembly</title>
+      <link>http://localhost:1313/tags/assembly/</link>
+      <pubDate>Thu, 08 Jun 2023 20:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/assembly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FinalExam</title>
+      <link>http://localhost:1313/tags/finalexam/</link>
+      <pubDate>Thu, 08 Jun 2023 20:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/finalexam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homework</title>
+      <link>http://localhost:1313/tags/homework/</link>
+      <pubDate>Thu, 08 Jun 2023 20:25:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/homework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kotlin</title>
+      <link>http://localhost:1313/tags/kotlin/</link>
+      <pubDate>Fri, 02 Jun 2023 16:18:22 +0800</pubDate>
+      <guid>http://localhost:1313/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MVVM</title>
+      <link>http://localhost:1313/tags/mvvm/</link>
+      <pubDate>Fri, 02 Jun 2023 16:18:22 +0800</pubDate>
+      <guid>http://localhost:1313/tags/mvvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Basic-Programming</title>
+      <link>http://localhost:1313/tags/basic-programming/</link>
+      <pubDate>Sun, 18 Sep 2022 01:35:01 +0800</pubDate>
+      <guid>http://localhost:1313/tags/basic-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sun, 18 Sep 2022 01:35:01 +0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TA</title>
+      <link>http://localhost:1313/tags/ta/</link>
+      <pubDate>Sun, 18 Sep 2022 01:35:01 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Algorithm</title>
+      <link>http://localhost:1313/tags/algorithm/</link>
+      <pubDate>Mon, 13 Jun 2022 23:02:37 +0800</pubDate>
+      <guid>http://localhost:1313/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SocketProgramming</title>
+      <link>http://localhost:1313/tags/socketprogramming/</link>
+      <pubDate>Sun, 15 May 2022 22:01:35 +0800</pubDate>
+      <guid>http://localhost:1313/tags/socketprogramming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 24 Feb 2022 01:24:22 +0800</pubDate>
+      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Wed, 09 Feb 2022 21:12:05 +0800</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Record</title>
+      <link>http://localhost:1313/tags/record/</link>
+      <pubDate>Wed, 09 Feb 2022 21:12:05 +0800</pubDate>
+      <guid>http://localhost:1313/tags/record/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSG</title>
+      <link>http://localhost:1313/tags/ssg/</link>
+      <pubDate>Wed, 09 Feb 2022 21:12:05 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ssg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:1313/tags/css/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>http://localhost:1313/tags/html/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JS</title>
+      <link>http://localhost:1313/tags/js/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Source</title>
+      <link>http://localhost:1313/tags/source/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Thu, 25 Feb 2021 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Introduction</title>
+      <link>http://localhost:1313/tags/introduction/</link>
+      <pubDate>Sat, 07 Nov 2020 10:41:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/introduction/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
